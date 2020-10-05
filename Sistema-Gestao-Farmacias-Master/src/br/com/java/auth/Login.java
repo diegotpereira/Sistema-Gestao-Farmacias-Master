@@ -13,7 +13,7 @@ import java.sql.ResultSet;
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 
-import br.com.java.view.Pharmacy;
+import br.com.java.view.Farmacia;
 
 
 
