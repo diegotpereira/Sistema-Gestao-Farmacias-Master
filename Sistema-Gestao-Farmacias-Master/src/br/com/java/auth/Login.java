@@ -28,7 +28,7 @@ public class Login extends javax.swing.JFrame{
 	
 	public Login() {
 		
-		setIconImage(Toolkit.getDefaultToolkit().getImage(Login.class.getResource("/img/Untitled.png")));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(Login.class.getResource("/br/com/java/img/Untitled.png")));
         initComponents();
 //        con=Connect.getConnection();
 //        new changestyle().chabgelock();
@@ -83,7 +83,7 @@ public class Login extends javax.swing.JFrame{
                 .addContainerGap(20, Short.MAX_VALUE))
         );
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/main/login.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/java/img/login.png"))); // NOI18N
 
         jPanel3.setBackground(new java.awt.Color(51, 51, 51));
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Login Information", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12), new java.awt.Color(255, 255, 255))); // NOI18N
