@@ -33,7 +33,7 @@ public class Login extends javax.swing.JFrame{
 		setIconImage(Toolkit.getDefaultToolkit().getImage(Login.class.getResource("/br/com/java/img/Untitled.png")));
         initComponents();
         con=Conexao.getConnection();
-        new ChangeStyle().chabgelock();
+        new ChangeStyle().changelock();
         SwingUtilities.updateComponentTreeUI(this);
         login_Hold();
 		
