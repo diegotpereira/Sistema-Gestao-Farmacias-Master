@@ -13,6 +13,8 @@ import java.sql.ResultSet;
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 
+import br.com.java.connection.Conexao;
+import br.com.java.ui.ChangeStyle;
 import br.com.java.view.Farmacia;
 
 
@@ -21,17 +23,17 @@ import br.com.java.view.Farmacia;
 
 public class Login extends javax.swing.JFrame{
 	
-//	Connection con = null;
-//	PreparedStatement pre= null;
-//	ResultSet res= null;
+	Connection con = null;
+	PreparedStatement pre= null;
+	ResultSet res= null;
 	static String NAME;
 	
 	public Login() {
 		
 		setIconImage(Toolkit.getDefaultToolkit().getImage(Login.class.getResource("/br/com/java/img/Untitled.png")));
         initComponents();
-//        con=Connect.getConnection();
-//        new changestyle().chabgelock();
+        con=Conexao.getConnection();
+        new ChangeStyle().chabgelock();
         SwingUtilities.updateComponentTreeUI(this);
         login_Hold();
 		
@@ -315,36 +317,36 @@ public class Login extends javax.swing.JFrame{
 	protected void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
 		// TODO Auto-generated method stub
 		
-//		if (id.getText().equals("")||pass.getText().equals("")) {
-//			JOptionPane.showMessageDialog(null,"Complete Your Login Information","Missing Information",2);
-//		}else {
-//			String sql = "select ID,NAME,PASSWORD from users where ID='"+id.getText()+"' ";
-//		    try{
-//		    	 pre=con.prepareStatement(sql);
-//		         res=pre.executeQuery();
-//		         if(res.next()){
-//		         NAME=res.getString("NAME");
-//		             if(res.getString("PASSWORD").equals(pass.getText())){
-//		                 Pharmacy pharmacy = new Pharmacy();
-//		                 if(id.getText().equals("1")){
-//		                 this.dispose();
-//		                 pharmacy.setVisible(true);        
-//		                 }else {
-//		                 this.dispose();
-//		                 pharmacy.setVisible(true);
-//		      }
+		if (id.getText().equals("")||pass.getText().equals("")) {
+			JOptionPane.showMessageDialog(null,"Complete Your Login Information","Missing Information",2);
+		}else {
+			String sql = "select ID,NAME,PASSWORD from users where ID='"+id.getText()+"' ";
+		    try{
+		    	 pre=con.prepareStatement(sql);
+		         res=pre.executeQuery();
+		         if(res.next()){
+		         NAME=res.getString("NAME");
+		             if(res.getString("PASSWORD").equals(pass.getText())){
+		                 Farmacia pharmacy = new Farmacia();
+		                 if(id.getText().equals("1")){
+		                 this.dispose();
+		                 pharmacy.setVisible(true);        
+		                 }else {
+		                 this.dispose();
+		                 pharmacy.setVisible(true);
+		      }
 		                
-//		}else {
-//			JOptionPane.showMessageDialog(null,"Wrong Password","Failed Access",2);
-//		      }
-//		}else {
-//			JOptionPane.showMessageDialog(null,"Wrong ID","Failed Access",2);
-//		}
-//		         
-//	    }catch(Exception e){
-//	        JOptionPane.showMessageDialog(null,e.getMessage(),"Error",2);
-//	    }
-//	}
+		}else {
+			JOptionPane.showMessageDialog(null,"Wrong Password","Failed Access",2);
+		      }
+		}else {
+			JOptionPane.showMessageDialog(null,"Wrong ID","Failed Access",2);
+		}
+		         
+	    }catch(Exception e){
+	        JOptionPane.showMessageDialog(null,e.getMessage(),"Error",2);
+	    }
+	}
 	}
 
 	protected void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
