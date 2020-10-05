@@ -2,7 +2,7 @@ package br.com.java.ui;
 
 public class ChangeStyle {
 
-	public void chabgelock() {
+	public void changelock() {
 		// TODO Auto-generated method stub
 		
 	}
