@@ -17,6 +17,7 @@ import br.com.java.view.Farmacia;
 
 
 
+
 public class Login extends javax.swing.JFrame{
 	
 	Connection con = null;
@@ -262,6 +263,35 @@ public class Login extends javax.swing.JFrame{
 	}
 	
 	//////EVENTOS
+	
+	 public static void main(String args[]) {
+	      
+	        try {
+	            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+	                if ("Nimbus".equals(info.getName())) {
+	                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+	                    break;
+	                }
+	            }
+	        } catch (ClassNotFoundException ex) {
+	            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+	        } catch (InstantiationException ex) {
+	            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+	        } catch (IllegalAccessException ex) {
+	            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+	        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+	            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+	        }
+	        //</editor-fold>
+	        
+
+	        /* Create and display the form */
+	        java.awt.EventQueue.invokeLater(new Runnable() {
+	            public void run() {
+	                new Login().setVisible(true);
+	            }
+	        });
+	    }
 
 	protected void idMouseClicked(java.awt.event.MouseEvent evt) {
 		// TODO Auto-generated method stub
@@ -299,8 +329,7 @@ public class Login extends javax.swing.JFrame{
 	protected void passKeyReleased(java.awt.event.KeyEvent evt) {
 		// TODO Auto-generated method stub
 		
-		if (rootPaneCheckingEnabled) {
-			pass.getForeground().equals(Color.GRAY);
+		if (pass.getForeground().equals(Color.GRAY)) {
 			char passs = pass.getText().charAt(0);
 		    pass.setText("");//
 		    pass.setText(String.valueOf(passs));
