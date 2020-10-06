@@ -16,8 +16,6 @@ import javax.swing.Timer;
 import br.com.java.auth.Login;
 import br.com.java.connection.Conexao;
 
-
-
 public class Farmacia extends javax.swing.JFrame{
 	
 	    Connection con = null;
@@ -727,187 +725,286 @@ public class Farmacia extends javax.swing.JFrame{
 
 		
 		/// Eventos
-		protected void retdrugActionPerformed(ActionEvent evt) {
+		protected void retdrugActionPerformed(java.awt.event.ActionEvent evt) {
+			// TODO Auto-generated method stub
+			new Retrieval_Drug().setVisible(true);
+			
+		}
+
+		protected void almostActionPerformed(java.awt.event.ActionEvent evt) {
+			// TODO Auto-generated method stub
+			new Almost_Finish().setVisible(true);
+			
+		}
+
+		protected void buydrugActionPerformed(java.awt.event.ActionEvent evt) {
+			// TODO Auto-generated method stub
+			buy.setVisible(true);
+	        buy.makedeal.setEnabled(true);
+	        buy.update.setEnabled(false);
+		
+			
+		}
+
+		protected void expired1ActionPerformed(java.awt.event.ActionEvent evt) {
+			// TODO Auto-generated method stub
+			new Expired_Drug().setVisible(true);
+			
+		}
+
+		protected void movedrug1ActionPerformed(java.awt.event.ActionEvent evt) {
+			// TODO Auto-generated method stub
+			new Move_Drug().setVisible(true);
+			
+		}
+
+		protected void druglistActionPerformed(java.awt.event.ActionEvent evt) {
+			// TODO Auto-generated method stub
+			new Drug_List().setVisible(true);
+			
+		}
+
+		protected void checkplaceActionPerformed(java.awt.event.ActionEvent evt) {
+			// TODO Auto-generated method stub
+			new Move_Drug().setVisible(true);
+			
+		}
+
+		protected void shiftsalesActionPerformed(java.awt.event.ActionEvent evt) {
+			// TODO Auto-generated method stub
+			new Shift_Sales().setVisible(true);
+		}
+
+		protected void logoutActionPerformed(java.awt.event.ActionEvent evt) {
+			// TODO Auto-generated method stub
+			this.dispose();
+	        new Login().setVisible(true);
+			
+		}
+
+		protected void salesbillActionPerformed(java.awt.event.ActionEvent evt) {
+			// TODO Auto-generated method stub
+			new Sales_Bill().setVisible(true);
+			
+		}
+
+		protected void salesActionPerformed(java.awt.event.ActionEvent evt) {
+			// TODO Auto-generated method stub
+			sales();
+			
+		}
+
+		protected void alldealsActionPerformed(java.awt.event.ActionEvent evt) {
+			// TODO Auto-generated method stub
+			new All_Deal().setVisible(true);
+			
+		}
+
+		protected void updatedealsActionPerformed(java.awt.event.ActionEvent evt) {
+			// TODO Auto-generated method stub
+			buy.setVisible(true);
+	        buy.update.setEnabled(true);
+	        buy.makedeal.setEnabled(false);
+			
+		}
+
+		protected void renew_validateActionPerformed(java.awt.event.ActionEvent evt) {
 			// TODO Auto-generated method stub
 			
 		}
 
-		protected void almostActionPerformed(ActionEvent evt) {
+		protected void purchaseActionPerformed(java.awt.event.ActionEvent evt) {
+			// TODO Auto-generated method stub
+			  if(!username.getText().equals("Employee")){
+		            enterpurchase();
+		        }else {
+		            String pass = JOptionPane.showInputDialog("You are not allowed to check user Inforamtion\nTo get in please confirm Admin Password");
+		            String sql = "select NAME,PASSWORD from users where NAME='Ebrahem Samer' ";
+		            
+		            if (!pass.equals("")) {
+		                
+		                try{
+		                    pre=con.prepareStatement(sql);
+		                    res=pre.executeQuery();
+		                    if(res.next()){
+		                        if(res.getString("PASSWORD").equals(pass)){
+		                            enterpurchase();
+		                        }else if(pass.isEmpty()){
+		                            JOptionPane.showMessageDialog(null,"You must write admin Password","Failed Access",2);
+		                        }else {
+		                            JOptionPane.showMessageDialog(null,"Wrong Password","Failed Access",2);
+		                        }}
+		                }catch(Exception e){
+		                    JOptionPane.showMessageDialog(null,e.getMessage(),"Error",2);
+		                }
+		            } else {
+		                JOptionPane.showMessageDialog(null,"Please type in Admin Password","Failed Access",2);
+		                
+		            }
+		            
+		        }
+			
+		}
+
+		protected void editpriceActionPerformed(java.awt.event.ActionEvent evt) {
+			// TODO Auto-generated method stub
+			new Edit_Price().setVisible(true);
+		}
+
+		protected void companyActionPerformed(java.awt.event.ActionEvent evt) {
+			// TODO Auto-generated method stub
+			company();
+		}
+
+		protected void changepassActionPerformed(java.awt.event.ActionEvent evt) {
+			// TODO Auto-generated method stub
+			new Change_Password().setVisible(true);
+			
+		}
+
+		protected void logindetailsActionPerformed(java.awt.event.ActionEvent evt) {
+			// TODO Auto-generated method stub
+			new Login_Details().setVisible(true);
+		}
+
+		protected void settingActionPerformed(java.awt.event.ActionEvent evt) {
+			// TODO Auto-generated method stub
+			setting();
+		}
+
+		protected void movedrugActionPerformed(java.awt.event.ActionEvent evt) {
+			// TODO Auto-generated method stub
+			new Drug_List().setVisible(true);
+		}
+
+		protected void updateActionPerformed(java.awt.event.ActionEvent evt) {
+			// TODO Auto-generated method stub
+			comp.setVisible(true);
+	        comp.save.setEnabled(false);
+	        comp.update.setEnabled(true);
+	        comp.delete.setEnabled(false);
+		}
+
+		protected void endwithActionPerformed(java.awt.event.ActionEvent evt) {
+			// TODO Auto-generated method stub
+			comp.setVisible(true);
+	        comp.save.setEnabled(false);
+	        comp.update.setEnabled(false);
+	        comp.delete.setEnabled(true);
+		}
+
+		protected void newcomActionPerformed(java.awt.event.ActionEvent evt) {
+			// TODO Auto-generated method stub
+			comp.setVisible(true);
+	        comp.save.setEnabled(true);
+	        comp.update.setEnabled(false);
+	        comp.delete.setEnabled(false);
+	}
+
+		protected void drugdetailsActionPerformed(java.awt.event.ActionEvent evt) {
+			// TODO Auto-generated method stub
+			enterdrugdetails();
+		}
+
+		protected void searchdrugActionPerformed(java.awt.event.ActionEvent evt) {
+			// TODO Auto-generated method stub
+			new Search_Drug().setVisible(true);
+		}
+
+		protected void updatedrugActionPerformed(java.awt.event.ActionEvent evt) {
+			// TODO Auto-generated method stub
+			drug.setVisible(true);
+	        drug.adddrug.setEnabled(false);
+	        drug.deletedrug.setEnabled(false);
+	        drug.updatedrug.setEnabled(true);
+		}
+
+		protected void deletedrugActionPerformed(java.awt.event.ActionEvent evt) {
+			// TODO Auto-generated method stub
+		    drug.setVisible(true);
+	        drug.updatedrug.setEnabled(false);
+	        drug.adddrug.setEnabled(false);
+	        drug.deletedrug.setEnabled(true);
+		}
+
+		protected void updateuserActionPerformed(java.awt.event.ActionEvent evt) {
 			// TODO Auto-generated method stub
 			
 		}
 
-		protected void buydrugActionPerformed(ActionEvent evt) {
+		protected void adddrugActionPerformed(java.awt.event.ActionEvent evt) {
+			// TODO Auto-generated method stub
+		    drug.setVisible(true);
+	        drug.updatedrug.setEnabled(false);
+	        drug.deletedrug.setEnabled(false);
+	        drug.adddrug.setEnabled(true);
+		}
+
+		protected void deleteuserActionPerformed(java.awt.event.ActionEvent evt) {
+			// TODO Auto-generated method stub
+			user.setVisible(true);
+	        user.adduser.setEnabled(false);
+	        user.updateuser.setEnabled(false);
+	        user.deleteuser.setEnabled(true);
+		}
+
+		protected void drugsActionPerformed(java.awt.event.ActionEvent evt) {
+			// TODO Auto-generated method stub
+			enterdrugs();
+		}
+
+		protected void adduserActionPerformed(java.awt.event.ActionEvent evt) {
+			// TODO Auto-generated method stub
+			user.setVisible(true);
+	        user.deleteuser.setEnabled(false);
+	        user.updateuser.setEnabled(false);
+	        user.adduser.setEnabled(true);
+		}
+
+		protected void userBActionPerformed(java.awt.event.ActionEvent evt) {
+			// TODO Auto-generated method stub
+			 if(!username.getText().equals("Employee")){
+		            enteruser();
+		        }else{
+		            String pass = JOptionPane.showInputDialog(null,"You are not allowed to check user Inforamtion\nTo get in please confirm Admin Password");
+		            String sql = "select NAME,PASSWORD from users where NAME='Syed Ibrahim' ";
+		            
+		            if (!pass.equals("")) {
+		                try{
+		                pre=con.prepareStatement(sql);
+		                res=pre.executeQuery();
+		                if(res.next()){
+		                    if(res.getString("PASSWORD").equals(pass)){
+		                        enteruser();
+		                    }else if(pass.isEmpty()){
+		                        JOptionPane.showMessageDialog(null,"You must write admin Password","Failed Access",2);
+		                    }else {
+		                        JOptionPane.showMessageDialog(null,"Wrong Password","Failed Access",2);
+		                    }
+		                }
+		            }catch(Exception e){
+		                JOptionPane.showMessageDialog(null,e.getMessage(),"Error",2);
+		            }
+		            } else {
+		                JOptionPane.showMessageDialog(null,"Please type in Admin password","Failed Access",2);
+		            }
+		            
+		            
+		        }
+			
+		}
+
+		protected void btnShowMsgActionPerformed(java.awt.event.ActionEvent evt) {
 			// TODO Auto-generated method stub
 			
 		}
 
-		protected void expired1ActionPerformed(ActionEvent evt) {
+		protected void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
 			// TODO Auto-generated method stub
 			
 		}
 
-		protected void movedrug1ActionPerformed(ActionEvent evt) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		protected void druglistActionPerformed(ActionEvent evt) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		protected void checkplaceActionPerformed(ActionEvent evt) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		protected void shiftsalesActionPerformed(ActionEvent evt) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		protected void logoutActionPerformed(ActionEvent evt) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		protected void salesbillActionPerformed(ActionEvent evt) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		protected void salesActionPerformed(ActionEvent evt) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		protected void alldealsActionPerformed(ActionEvent evt) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		protected void updatedealsActionPerformed(ActionEvent evt) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		protected void renew_validateActionPerformed(ActionEvent evt) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		protected void purchaseActionPerformed(ActionEvent evt) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		protected void editpriceActionPerformed(ActionEvent evt) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		protected void companyActionPerformed(ActionEvent evt) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		protected void changepassActionPerformed(ActionEvent evt) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		protected void logindetailsActionPerformed(ActionEvent evt) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		protected void settingActionPerformed(ActionEvent evt) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		protected void movedrugActionPerformed(ActionEvent evt) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		protected void updateActionPerformed(ActionEvent evt) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		protected void endwithActionPerformed(ActionEvent evt) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		protected void newcomActionPerformed(ActionEvent evt) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		protected void drugdetailsActionPerformed(ActionEvent evt) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		protected void searchdrugActionPerformed(ActionEvent evt) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		protected void updatedrugActionPerformed(ActionEvent evt) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		protected void deletedrugActionPerformed(ActionEvent evt) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		protected void updateuserActionPerformed(ActionEvent evt) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		protected void adddrugActionPerformed(ActionEvent evt) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		protected void deleteuserActionPerformed(ActionEvent evt) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		protected void drugsActionPerformed(ActionEvent evt) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		protected void adduserActionPerformed(ActionEvent evt) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		protected void userBActionPerformed(ActionEvent evt) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		protected void btnShowMsgActionPerformed(ActionEvent evt) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		protected void jButton1ActionPerformed(ActionEvent evt) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		protected void jButton2ActionPerformed(ActionEvent evt) {
+		protected void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
 			// TODO Auto-generated method stub
 			
 		}
