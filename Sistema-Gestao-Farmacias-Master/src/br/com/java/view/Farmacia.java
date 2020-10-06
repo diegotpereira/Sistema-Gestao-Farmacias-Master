@@ -478,7 +478,7 @@ public class Farmacia extends javax.swing.JFrame{
 	        setting.setBounds(10, 102, 141, 34);
 
 	        logindetails.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-	        logindetails.setText("Login Details");
+	        logindetails.setText("Detalhes de Login");
 	        logindetails.addActionListener(new java.awt.event.ActionListener() {
 	            public void actionPerformed(java.awt.event.ActionEvent evt) {
 	                logindetailsActionPerformed(evt);
@@ -488,7 +488,7 @@ public class Farmacia extends javax.swing.JFrame{
 	        logindetails.setBounds(10, 154, 141, 31);
 
 	        changepass.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-	        changepass.setText("Change Password");
+	        changepass.setText("Alterar Password");
 	        changepass.addActionListener(new java.awt.event.ActionListener() {
 	            public void actionPerformed(java.awt.event.ActionEvent evt) {
 	                changepassActionPerformed(evt);
@@ -591,7 +591,7 @@ public class Farmacia extends javax.swing.JFrame{
 	        salesbill.setBounds(338, 154, 150, 31);
 
 	        logout.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-	        logout.setText("Logout");
+	        logout.setText("Sair");
 	        logout.addActionListener(new java.awt.event.ActionListener() {
 	            public void actionPerformed(java.awt.event.ActionEvent evt) {
 	                logoutActionPerformed(evt);
