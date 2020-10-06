@@ -119,7 +119,7 @@ public class Farmacia extends javax.swing.JFrame{
 	        jMenu2 = new javax.swing.JMenu();
 
 	        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-	        setTitle("Pharmacy Management");
+	        setTitle("Centro de Administração");
 	        setPreferredSize(new java.awt.Dimension(1220, 607));
 	        setResizable(false);
 
@@ -129,13 +129,13 @@ public class Farmacia extends javax.swing.JFrame{
 	        jPanel2.setBackground(new java.awt.Color(102, 102, 102));
 
 	        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-	        jLabel1.setText("Pharmacy Management");
+	        jLabel1.setText("Gerência da Farmácia");
 
 	        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-	        jLabel2.setText("Time");
+	        jLabel2.setText("Hora");
 
 	        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-	        jLabel3.setText("Today");
+	        jLabel3.setText("Data");
 
 	        time.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
 	        time.setForeground(new java.awt.Color(0, 0, 102));
@@ -161,10 +161,10 @@ public class Farmacia extends javax.swing.JFrame{
 	        username.setText("Login As : ");
 
 	        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-	        jLabel5.setText("Login As : ");
+	        jLabel5.setText("Conta : ");
 
 	        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-	        jLabel11.setText("User Name : ");
+	        jLabel11.setText("Usuário : ");
 
 	        username1.setBackground(new java.awt.Color(255, 255, 255));
 	        username1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -182,7 +182,7 @@ public class Farmacia extends javax.swing.JFrame{
 	        });
 
 	        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-	        jLabel4.setText("(Administration)");
+	        jLabel4.setText("(Administração)");
 
 	        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
 	        jPanel2.setLayout(jPanel2Layout);
@@ -325,7 +325,7 @@ public class Farmacia extends javax.swing.JFrame{
 
 	        userB.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
 	        userB.setForeground(new java.awt.Color(0, 51, 51));
-	        userB.setText("User");
+	        userB.setText("Usuário");
 	        userB.addActionListener(new java.awt.event.ActionListener() {
 	            public void actionPerformed(java.awt.event.ActionEvent evt) {
 	                userBActionPerformed(evt);
@@ -336,7 +336,7 @@ public class Farmacia extends javax.swing.JFrame{
 
 	        drugs.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
 	        drugs.setForeground(new java.awt.Color(0, 51, 51));
-	        drugs.setText("Drugs");
+	        drugs.setText("Medicamentos");
 	        drugs.addActionListener(new java.awt.event.ActionListener() {
 	            public void actionPerformed(java.awt.event.ActionEvent evt) {
 	                drugsActionPerformed(evt);
@@ -417,7 +417,7 @@ public class Farmacia extends javax.swing.JFrame{
 
 	        drugdetails.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
 	        drugdetails.setForeground(new java.awt.Color(0, 51, 51));
-	        drugdetails.setText("Drug Details");
+	        drugdetails.setText("Detalhes do medicamento");
 	        drugdetails.addActionListener(new java.awt.event.ActionListener() {
 	            public void actionPerformed(java.awt.event.ActionEvent evt) {
 	                drugdetailsActionPerformed(evt);
@@ -468,7 +468,7 @@ public class Farmacia extends javax.swing.JFrame{
 
 	        setting.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
 	        setting.setForeground(new java.awt.Color(0, 51, 51));
-	        setting.setText("Setting");
+	        setting.setText("Configuração");
 	        setting.addActionListener(new java.awt.event.ActionListener() {
 	            public void actionPerformed(java.awt.event.ActionEvent evt) {
 	                settingActionPerformed(evt);
@@ -499,7 +499,7 @@ public class Farmacia extends javax.swing.JFrame{
 
 	        company.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
 	        company.setForeground(new java.awt.Color(0, 51, 51));
-	        company.setText("Company");
+	        company.setText("Empresa");
 	        company.addActionListener(new java.awt.event.ActionListener() {
 	            public void actionPerformed(java.awt.event.ActionEvent evt) {
 	                companyActionPerformed(evt);
@@ -520,7 +520,7 @@ public class Farmacia extends javax.swing.JFrame{
 
 	        purchase.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
 	        purchase.setForeground(new java.awt.Color(0, 51, 51));
-	        purchase.setText("Purchases");
+	        purchase.setText("Compras");
 	        purchase.addActionListener(new java.awt.event.ActionListener() {
 	            public void actionPerformed(java.awt.event.ActionEvent evt) {
 	                purchaseActionPerformed(evt);
@@ -571,7 +571,7 @@ public class Farmacia extends javax.swing.JFrame{
 
 	        sales.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
 	        sales.setForeground(new java.awt.Color(0, 51, 51));
-	        sales.setText("Sales");
+	        sales.setText("Vendas");
 	        sales.addActionListener(new java.awt.event.ActionListener() {
 	            public void actionPerformed(java.awt.event.ActionEvent evt) {
 	                salesActionPerformed(evt);
@@ -646,22 +646,22 @@ public class Farmacia extends javax.swing.JFrame{
 	        jLabel6.setBounds(0, 450, 80, 80);
 
 	        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-	        jLabel7.setText("045/3397825");
+	        jLabel7.setText("github.com/diegotpereira");
 	        jPanel1.add(jLabel7);
 	        jLabel7.setBounds(90, 490, 390, 29);
 
 	        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-	        jLabel8.setText("01128284736 / 01014033489");
+	        jLabel8.setText("51 998360638 / 51 992127799");
 	        jPanel1.add(jLabel8);
 	        jLabel8.setBounds(90, 450, 390, 29);
 
 	        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-	        jLabel9.setText("Alexandria / Elraml Station / st-Elshazly");
+	        jLabel9.setText("Porto Alegre / Rio Grande do Sul / Brasil");
 	        jPanel1.add(jLabel9);
 	        jLabel9.setBounds(120, 550, 380, 22);
 
 	        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-	        jLabel10.setText("Location : ");
+	        jLabel10.setText("Local : ");
 	        jPanel1.add(jLabel10);
 	        jLabel10.setBounds(10, 550, 105, 22);
 
@@ -699,10 +699,10 @@ public class Farmacia extends javax.swing.JFrame{
 	        jPanel1.add(jLabel13);
 	        jLabel13.setBounds(0, 74, 1220, 520);
 
-	        jMenu1.setText("About Pharmacy");
+	        jMenu1.setText("Sobre a Farmácia");
 	        jMenuBar1.add(jMenu1);
 
-	        jMenu2.setText("About Developer");
+	        jMenu2.setText("Sobre Desenvolvedor");
 	        jMenuBar1.add(jMenu2);
 
 	        setJMenuBar(jMenuBar1);
