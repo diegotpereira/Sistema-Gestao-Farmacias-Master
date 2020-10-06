@@ -1,4 +1,4 @@
-package br.com.java.auth;
+package br.com.java.view;
 
 import java.awt.Color;
 import java.awt.Toolkit;
@@ -11,12 +11,6 @@ import javax.swing.SwingUtilities;
 
 import br.com.java.connection.Conexao;
 import br.com.java.ui.ChangeStyle;
-import br.com.java.view.Farmacia;
-
-
-
-
-
 
 public class Login extends javax.swing.JFrame{
 	
