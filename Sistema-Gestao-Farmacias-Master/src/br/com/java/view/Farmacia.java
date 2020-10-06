@@ -346,7 +346,7 @@ public class Farmacia extends javax.swing.JFrame{
 	        drugs.setBounds(860, 100, 150, 34);
 
 	        adduser.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-	        adduser.setText("Add User");
+	        adduser.setText("Adicionar Usuário");
 	        adduser.addActionListener(new java.awt.event.ActionListener() {
 	            public void actionPerformed(java.awt.event.ActionEvent evt) {
 	                adduserActionPerformed(evt);
@@ -356,7 +356,7 @@ public class Farmacia extends javax.swing.JFrame{
 	        adduser.setBounds(1050, 150, 140, 31);
 
 	        deleteuser.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-	        deleteuser.setText("Delete User");
+	        deleteuser.setText("Deletar Usuário");
 	        deleteuser.addActionListener(new java.awt.event.ActionListener() {
 	            public void actionPerformed(java.awt.event.ActionEvent evt) {
 	                deleteuserActionPerformed(evt);
@@ -366,7 +366,7 @@ public class Farmacia extends javax.swing.JFrame{
 	        deleteuser.setBounds(1050, 190, 140, 31);
 
 	        updateuser.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-	        updateuser.setText("Update User");
+	        updateuser.setText("Atualizar Usuário");
 	        updateuser.addActionListener(new java.awt.event.ActionListener() {
 	            public void actionPerformed(java.awt.event.ActionEvent evt) {
 	                updateuserActionPerformed(evt);
@@ -376,7 +376,7 @@ public class Farmacia extends javax.swing.JFrame{
 	        updateuser.setBounds(1050, 230, 140, 31);
 
 	        adddrug.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-	        adddrug.setText("Add Drug");
+	        adddrug.setText("Adicionar Medicação");
 	        adddrug.addActionListener(new java.awt.event.ActionListener() {
 	            public void actionPerformed(java.awt.event.ActionEvent evt) {
 	                adddrugActionPerformed(evt);
@@ -386,7 +386,7 @@ public class Farmacia extends javax.swing.JFrame{
 	        adddrug.setBounds(860, 150, 150, 31);
 
 	        deletedrug.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-	        deletedrug.setText("Delete Drug");
+	        deletedrug.setText("Deletar Medicação");
 	        deletedrug.addActionListener(new java.awt.event.ActionListener() {
 	            public void actionPerformed(java.awt.event.ActionEvent evt) {
 	                deletedrugActionPerformed(evt);
@@ -396,7 +396,7 @@ public class Farmacia extends javax.swing.JFrame{
 	        deletedrug.setBounds(860, 190, 150, 31);
 
 	        updatedrug.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-	        updatedrug.setText("Update Drug");
+	        updatedrug.setText("Alterar Medicação");
 	        updatedrug.addActionListener(new java.awt.event.ActionListener() {
 	            public void actionPerformed(java.awt.event.ActionEvent evt) {
 	                updatedrugActionPerformed(evt);
@@ -406,7 +406,7 @@ public class Farmacia extends javax.swing.JFrame{
 	        updatedrug.setBounds(860, 230, 150, 31);
 
 	        searchdrug.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-	        searchdrug.setText("Search Drug");
+	        searchdrug.setText("Buscar Medicação");
 	        searchdrug.addActionListener(new java.awt.event.ActionListener() {
 	            public void actionPerformed(java.awt.event.ActionEvent evt) {
 	                searchdrugActionPerformed(evt);
@@ -427,7 +427,7 @@ public class Farmacia extends javax.swing.JFrame{
 	        drugdetails.setBounds(670, 100, 150, 34);
 
 	        newcom.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-	        newcom.setText("New Company");
+	        newcom.setText("Nova Empresa");
 	        newcom.addActionListener(new java.awt.event.ActionListener() {
 	            public void actionPerformed(java.awt.event.ActionEvent evt) {
 	                newcomActionPerformed(evt);
@@ -437,7 +437,7 @@ public class Farmacia extends javax.swing.JFrame{
 	        newcom.setBounds(188, 154, 118, 31);
 
 	        endwith.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-	        endwith.setText("End With");
+	        endwith.setText("Encerrar");
 	        endwith.addActionListener(new java.awt.event.ActionListener() {
 	            public void actionPerformed(java.awt.event.ActionEvent evt) {
 	                endwithActionPerformed(evt);
@@ -447,7 +447,7 @@ public class Farmacia extends javax.swing.JFrame{
 	        endwith.setBounds(188, 195, 118, 31);
 
 	        update.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-	        update.setText("Updates");
+	        update.setText("Atualizações");
 	        update.addActionListener(new java.awt.event.ActionListener() {
 	            public void actionPerformed(java.awt.event.ActionEvent evt) {
 	                updateActionPerformed(evt);
@@ -457,7 +457,7 @@ public class Farmacia extends javax.swing.JFrame{
 	        update.setBounds(188, 236, 119, 31);
 
 	        movedrug.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-	        movedrug.setText("Drugs_List");
+	        movedrug.setText("Lista de Medicação");
 	        movedrug.addActionListener(new java.awt.event.ActionListener() {
 	            public void actionPerformed(java.awt.event.ActionEvent evt) {
 	                movedrugActionPerformed(evt);
@@ -530,7 +530,7 @@ public class Farmacia extends javax.swing.JFrame{
 	        purchase.setBounds(520, 100, 130, 34);
 
 	        renew_validate.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-	        renew_validate.setText("Renew_Validity");
+	        renew_validate.setText("Renovar Validade");
 	        renew_validate.addActionListener(new java.awt.event.ActionListener() {
 	            public void actionPerformed(java.awt.event.ActionEvent evt) {
 	                renew_validateActionPerformed(evt);
@@ -540,7 +540,7 @@ public class Farmacia extends javax.swing.JFrame{
 	        renew_validate.setBounds(670, 270, 150, 31);
 
 	        buydrug.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-	        buydrug.setText("Buy Drugs");
+	        buydrug.setText("Compras");
 	        buydrug.addActionListener(new java.awt.event.ActionListener() {
 	            public void actionPerformed(java.awt.event.ActionEvent evt) {
 	                buydrugActionPerformed(evt);
@@ -550,7 +550,7 @@ public class Farmacia extends javax.swing.JFrame{
 	        buydrug.setBounds(520, 150, 130, 31);
 
 	        updatedeals.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-	        updatedeals.setText("Update Deals");
+	        updatedeals.setText("Atualizar Ofertas");
 	        updatedeals.addActionListener(new java.awt.event.ActionListener() {
 	            public void actionPerformed(java.awt.event.ActionEvent evt) {
 	                updatedealsActionPerformed(evt);
@@ -560,7 +560,7 @@ public class Farmacia extends javax.swing.JFrame{
 	        updatedeals.setBounds(520, 190, 130, 31);
 
 	        alldeals.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-	        alldeals.setText("All Deals");
+	        alldeals.setText("Todas as ofertas");
 	        alldeals.addActionListener(new java.awt.event.ActionListener() {
 	            public void actionPerformed(java.awt.event.ActionEvent evt) {
 	                alldealsActionPerformed(evt);
@@ -581,7 +581,7 @@ public class Farmacia extends javax.swing.JFrame{
 	        sales.setBounds(338, 102, 150, 34);
 
 	        salesbill.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-	        salesbill.setText("Sales Bill");
+	        salesbill.setText("Faturas");
 	        salesbill.addActionListener(new java.awt.event.ActionListener() {
 	            public void actionPerformed(java.awt.event.ActionEvent evt) {
 	                salesbillActionPerformed(evt);
@@ -631,7 +631,7 @@ public class Farmacia extends javax.swing.JFrame{
 	        druglist.setBounds(0, 0, 96, 30);
 
 	        movedrug1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-	        movedrug1.setText("Move Drug");
+	        movedrug1.setText("Mover Medicação");
 	        movedrug1.addActionListener(new java.awt.event.ActionListener() {
 	            public void actionPerformed(java.awt.event.ActionEvent evt) {
 	                movedrug1ActionPerformed(evt);
@@ -666,7 +666,7 @@ public class Farmacia extends javax.swing.JFrame{
 	        jLabel10.setBounds(10, 550, 105, 22);
 
 	        expired1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-	        expired1.setText("Expired Drugs");
+	        expired1.setText("Medicamentos Vencidos");
 	        expired1.addActionListener(new java.awt.event.ActionListener() {
 	            public void actionPerformed(java.awt.event.ActionEvent evt) {
 	                expired1ActionPerformed(evt);
@@ -676,7 +676,7 @@ public class Farmacia extends javax.swing.JFrame{
 	        expired1.setBounds(670, 230, 150, 31);
 
 	        almost.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-	        almost.setText("Almost_Finished");
+	        almost.setText("Estoque baixo");
 	        almost.addActionListener(new java.awt.event.ActionListener() {
 	            public void actionPerformed(java.awt.event.ActionEvent evt) {
 	                almostActionPerformed(evt);
@@ -686,7 +686,7 @@ public class Farmacia extends javax.swing.JFrame{
 	        almost.setBounds(670, 310, 150, 31);
 
 	        retdrug.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-	        retdrug.setText("Retrieval Drug");
+	        retdrug.setText("Remédio controlado");
 	        retdrug.addActionListener(new java.awt.event.ActionListener() {
 	            public void actionPerformed(java.awt.event.ActionEvent evt) {
 	                retdrugActionPerformed(evt);
