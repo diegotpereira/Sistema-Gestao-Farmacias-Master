@@ -13,8 +13,8 @@ import java.util.Date;
 import javax.swing.JOptionPane;
 import javax.swing.Timer;
 
-import br.com.java.auth.Login;
 import br.com.java.connection.Conexao;
+
 
 public class Farmacia extends javax.swing.JFrame{
 	
@@ -22,11 +22,11 @@ public class Farmacia extends javax.swing.JFrame{
 	    PreparedStatement pre= null;
 	    ResultSet res = null;
 	    static int ex;
-//	    User user ;
-//	    Company comp;
-//	    static Drug drug ;
-//	    static Move_Drug move_drug;
-//	    Buy_Drug buy;
+	    User user ;
+	    Company comp;
+	    static Drug drug ;
+	    static Move_Drug move_drug;
+	    Buy_Drug buy;
 	    Date d;
 	    SimpleDateFormat dd;
 	    static String to;
@@ -42,11 +42,11 @@ public class Farmacia extends javax.swing.JFrame{
 	        con=Conexao.getConnection();
 	        showDate();
 	        buttonvis();
-//	        user = new User();
-//	        drug = new Drug();
-//	        comp = new Company();
-//	        move_drug = new Move_Drug();
-//	        buy = new Buy_Drug();
+	        user = new User();
+	        drug = new Drug();
+	        comp = new Company();
+	        move_drug = new Move_Drug();
+	        buy = new Buy_Drug();
 	        loginas();
 	        warning();
 	        login_as();
@@ -147,7 +147,7 @@ public class Farmacia extends javax.swing.JFrame{
 	        today.setText("00-00-0000");
 
 	        jButton1.setBackground(new java.awt.Color(0, 0, 0));
-	        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/main/Apps-session-logout-icon.png"))); // NOI18N
+	        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/java/Apps-session-logout-icon.png"))); // NOI18N
 	        jButton1.setToolTipText("Logout");
 	        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 	        jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -173,7 +173,7 @@ public class Farmacia extends javax.swing.JFrame{
 	        username1.setText("Login As : ");
 
 	        jButton2.setBackground(new java.awt.Color(0, 0, 0));
-	        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/main/2572420.postal.envelope.icon.dark.blue.isolated.on.black.background (1).jpg"))); // NOI18N
+	        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/java/2572420.postal.envelope.icon.dark.blue.isolated.on.black.background (1).jpg"))); // NOI18N
 	        jButton2.setToolTipText("Public Inbox");
 	        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 	        jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -641,7 +641,7 @@ public class Farmacia extends javax.swing.JFrame{
 	        jPanel1.add(movedrug1);
 	        movedrug1.setBounds(860, 310, 150, 31);
 
-	        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/main/rsz_1rsz_16314569-telephone-round-gray-web-icon-on-black-background-stock-photo-phone.jpg"))); // NOI18N
+	        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/java/rsz_1rsz_16314569-telephone-round-gray-web-icon-on-black-background-stock-photo-phone.jpg"))); // NOI18N
 	        jLabel6.setText("jLabel6");
 	        jPanel1.add(jLabel6);
 	        jLabel6.setBounds(0, 450, 80, 80);
@@ -696,7 +696,7 @@ public class Farmacia extends javax.swing.JFrame{
 	        jPanel1.add(retdrug);
 	        retdrug.setBounds(338, 235, 150, 31);
 
-	        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/main/capsule.pill.health.medicine (1).jpg"))); // NOI18N
+	        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/java/capsule.pill.health.medicine (1).jpg"))); // NOI18N
 	        jPanel1.add(jLabel13);
 	        jLabel13.setBounds(0, 74, 1220, 520);
 
@@ -724,6 +724,44 @@ public class Farmacia extends javax.swing.JFrame{
 		}
 
 		
+		protected void btnShowMsgActionPerformed(java.awt.event.ActionEvent evt) {
+			// TODO Auto-generated method stub
+			msgAlertDialog.setVisible(false);
+	        new Show_Message().setVisible(true);
+	        deleteMsg();
+		}
+
+		private void deleteMsg() {
+			// TODO Auto-generated method stub
+		 String sql = "delete from message_history";
+	        try {
+	            pre=con.prepareStatement(sql);
+	            pre.execute();
+	        } catch (Exception e) {
+	            JOptionPane.showMessageDialog(null,e.getMessage(),"Error",2);
+	        }
+		}
+
+		protected void updateuserActionPerformed(java.awt.event.ActionEvent evt) {
+			// TODO Auto-generated method stub
+			user.setVisible(true);
+	        user.deleteuser.setEnabled(false);
+	        user.adduser.setEnabled(false);
+	        user.updateuser.setEnabled(true);
+	        user.id.setEditable(false);
+	}
+
+		protected void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
+			// TODO Auto-generated method stub
+			new Inbox().setVisible(true);
+		}
+
+		protected void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
+			// TODO Auto-generated method stub
+			this.dispose();
+	        new Login().setVisible(true);
+		}
+
 		/// Eventos
 		protected void retdrugActionPerformed(java.awt.event.ActionEvent evt) {
 			// TODO Auto-generated method stub
@@ -794,6 +832,51 @@ public class Farmacia extends javax.swing.JFrame{
 			
 		}
 
+		private void sales() {
+			// TODO Auto-generated method stub
+			sales.setEnabled(false);
+	        userB.setEnabled(true);
+	        drugs.setEnabled(true);
+	        drugdetails.setEnabled(true);
+	        purchase.setEnabled(true);
+	        setting.setEnabled(true);
+	        company.setEnabled(true);
+	        
+	        adduser.setVisible(false);
+	        deleteuser.setVisible(false);
+	        updateuser.setVisible(false);
+	        
+	        adddrug.setVisible(false);
+	        deletedrug.setVisible(false);
+	        updatedrug.setVisible(false);
+	        searchdrug.setVisible(false);
+	        movedrug.setVisible(false);
+	        movedrug1.setVisible(false);
+	        
+	        editprice.setVisible(false);
+	        checkplace.setVisible(false);
+	        renew_validate.setVisible(false);
+	        expired1.setVisible(false);
+	        almost.setVisible(false);
+	        
+	        buydrug.setVisible(false);
+	        updatedeals.setVisible(false);
+	        alldeals.setVisible(false);
+	        
+	        salesbill.setVisible(true);
+	        shiftsales.setVisible(true);
+	        retdrug.setVisible(true);
+	        
+	        newcom.setVisible(false);
+	        endwith.setVisible(false);
+	        update.setVisible(false);
+	        
+	        logindetails.setVisible(false);
+	        changepass.setVisible(false);
+	        logout.setVisible(false);
+			
+		}
+
 		protected void alldealsActionPerformed(java.awt.event.ActionEvent evt) {
 			// TODO Auto-generated method stub
 			new All_Deal().setVisible(true);
@@ -846,6 +929,51 @@ public class Farmacia extends javax.swing.JFrame{
 			
 		}
 
+		private void enterpurchase() {
+			// TODO Auto-generated method stub
+			purchase.setEnabled(false);
+	        userB.setEnabled(true);
+	        drugs.setEnabled(true);
+	        drugdetails.setEnabled(true);
+	        sales.setEnabled(true);
+	        setting.setEnabled(true);
+	        company.setEnabled(true);
+	        
+	        adduser.setVisible(false);
+	        deleteuser.setVisible(false);
+	        updateuser.setVisible(false);
+	        
+	        adddrug.setVisible(false);
+	        deletedrug.setVisible(false);
+	        updatedrug.setVisible(false);
+	        searchdrug.setVisible(false);
+	        movedrug.setVisible(false);
+	        movedrug1.setVisible(false);
+	        
+	        editprice.setVisible(false);
+	        checkplace.setVisible(false);
+	        renew_validate.setVisible(false);
+	        expired1.setVisible(false);
+	        almost.setVisible(false);
+	        
+	        buydrug.setVisible(true);
+	        updatedeals.setVisible(true);
+	        alldeals.setVisible(true);
+	        
+	        salesbill.setVisible(false);
+	        shiftsales.setVisible(false);
+	        retdrug.setVisible(false);
+	        
+	        newcom.setVisible(false);
+	        endwith.setVisible(false);
+	        update.setVisible(false);
+	        
+	        logindetails.setVisible(false);
+	        changepass.setVisible(false);
+	        logout.setVisible(false);
+			
+		}
+
 		protected void editpriceActionPerformed(java.awt.event.ActionEvent evt) {
 			// TODO Auto-generated method stub
 			new Edit_Price().setVisible(true);
@@ -854,6 +982,51 @@ public class Farmacia extends javax.swing.JFrame{
 		protected void companyActionPerformed(java.awt.event.ActionEvent evt) {
 			// TODO Auto-generated method stub
 			company();
+		}
+
+		private void company() {
+			// TODO Auto-generated method stub
+			company.setEnabled(false);
+	        userB.setEnabled(true);
+	        drugs.setEnabled(true);
+	        drugdetails.setEnabled(true);
+	        sales.setEnabled(true);
+	        purchase.setEnabled(true);
+	        setting.setEnabled(true);
+	        
+	        adduser.setVisible(false);
+	        deleteuser.setVisible(false);
+	        updateuser.setVisible(false);
+	        
+	        adddrug.setVisible(false);
+	        deletedrug.setVisible(false);
+	        updatedrug.setVisible(false);
+	        searchdrug.setVisible(false);
+	        movedrug.setVisible(false);
+	        movedrug1.setVisible(false);
+	        
+	        editprice.setVisible(false);
+	        checkplace.setVisible(false);
+	        renew_validate.setVisible(false);
+	        expired1.setVisible(false);
+	        almost.setVisible(false);
+	        
+	        buydrug.setVisible(false);
+	        updatedeals.setVisible(false);
+	        alldeals.setVisible(false);
+	        
+	        salesbill.setVisible(false);
+	        shiftsales.setVisible(false);
+	        retdrug.setVisible(false);
+	        
+	        newcom.setVisible(true);
+	        endwith.setVisible(true);
+	        update.setVisible(true);
+	        
+	        logindetails.setVisible(false);
+	        changepass.setVisible(false);
+	        logout.setVisible(false);
+			
 		}
 
 		protected void changepassActionPerformed(java.awt.event.ActionEvent evt) {
@@ -870,6 +1043,51 @@ public class Farmacia extends javax.swing.JFrame{
 		protected void settingActionPerformed(java.awt.event.ActionEvent evt) {
 			// TODO Auto-generated method stub
 			setting();
+		}
+
+		private void setting() {
+			// TODO Auto-generated method stub
+			 setting.setEnabled(false);
+		        userB.setEnabled(true);
+		        drugs.setEnabled(true);
+		        drugdetails.setEnabled(true);
+		        sales.setEnabled(true);
+		        purchase.setEnabled(true);
+		        company.setEnabled(true);
+		        
+		        adduser.setVisible(false);
+		        deleteuser.setVisible(false);
+		        updateuser.setVisible(false);
+		        
+		        adddrug.setVisible(false);
+		        deletedrug.setVisible(false);
+		        updatedrug.setVisible(false);
+		        searchdrug.setVisible(false);
+		        movedrug.setVisible(false);
+		        movedrug1.setVisible(false);
+		        
+		        editprice.setVisible(false);
+		        checkplace.setVisible(false);
+		        renew_validate.setVisible(false);
+		        expired1.setVisible(false);
+		        almost.setVisible(false);
+		        
+		        buydrug.setVisible(false);
+		        updatedeals.setVisible(false);
+		        alldeals.setVisible(false);
+		        
+		        salesbill.setVisible(false);
+		        shiftsales.setVisible(false);
+		        retdrug.setVisible(false);
+		        
+		        newcom.setVisible(false);
+		        endwith.setVisible(false);
+		        update.setVisible(false);
+		        
+		        logindetails.setVisible(true);
+		        changepass.setVisible(true);
+		        logout.setVisible(true);
+			
 		}
 
 		protected void movedrugActionPerformed(java.awt.event.ActionEvent evt) {
@@ -906,6 +1124,51 @@ public class Farmacia extends javax.swing.JFrame{
 			enterdrugdetails();
 		}
 
+		private void enterdrugdetails() {
+			// TODO Auto-generated method stub
+			drugdetails.setEnabled(false);
+	        userB.setEnabled(true);
+	        drugs.setEnabled(true);
+	        sales.setEnabled(true);
+	        purchase.setEnabled(true);
+	        setting.setEnabled(true);
+	        company.setEnabled(true);
+	        
+	        adduser.setVisible(false);
+	        deleteuser.setVisible(false);
+	        updateuser.setVisible(false);
+	        
+	        adddrug.setVisible(false);
+	        deletedrug.setVisible(false);
+	        updatedrug.setVisible(false);
+	        searchdrug.setVisible(false);
+	        movedrug.setVisible(false);
+	        movedrug1.setVisible(false);
+	        
+	        editprice.setVisible(true);
+	        checkplace.setVisible(true);
+	        renew_validate.setVisible(true);
+	        expired1.setVisible(true);
+	        almost.setVisible(true);
+	        
+	        buydrug.setVisible(false);
+	        updatedeals.setVisible(false);
+	        alldeals.setVisible(false);
+	        
+	        salesbill.setVisible(false);
+	        shiftsales.setVisible(false);
+	        retdrug.setVisible(false);
+	        
+	        newcom.setVisible(false);
+	        endwith.setVisible(false);
+	        update.setVisible(false);
+	        
+	        logindetails.setVisible(false);
+	        changepass.setVisible(false);
+	        logout.setVisible(false);
+			
+		}
+
 		protected void searchdrugActionPerformed(java.awt.event.ActionEvent evt) {
 			// TODO Auto-generated method stub
 			new Search_Drug().setVisible(true);
@@ -927,11 +1190,7 @@ public class Farmacia extends javax.swing.JFrame{
 	        drug.deletedrug.setEnabled(true);
 		}
 
-		protected void updateuserActionPerformed(java.awt.event.ActionEvent evt) {
-			// TODO Auto-generated method stub
-			
-		}
-
+		
 		protected void adddrugActionPerformed(java.awt.event.ActionEvent evt) {
 			// TODO Auto-generated method stub
 		    drug.setVisible(true);
@@ -951,6 +1210,51 @@ public class Farmacia extends javax.swing.JFrame{
 		protected void drugsActionPerformed(java.awt.event.ActionEvent evt) {
 			// TODO Auto-generated method stub
 			enterdrugs();
+		}
+
+		private void enterdrugs() {
+			// TODO Auto-generated method stub
+			drugs.setEnabled(false);
+	        userB.setEnabled(true);
+	        drugdetails.setEnabled(true);
+	        sales.setEnabled(true);
+	        purchase.setEnabled(true);
+	        setting.setEnabled(true);
+	        company.setEnabled(true);
+	        
+	        adduser.setVisible(false);
+	        deleteuser.setVisible(false);
+	        updateuser.setVisible(false);
+	        
+	        adddrug.setVisible(true);
+	        deletedrug.setVisible(true);
+	        updatedrug.setVisible(true);
+	        searchdrug.setVisible(true);
+	        movedrug.setVisible(true);
+	        movedrug1.setVisible(true);
+	        
+	        editprice.setVisible(false);
+	        checkplace.setVisible(false);
+	        renew_validate.setVisible(false);
+	        expired1.setVisible(false);
+	        almost.setVisible(false);
+	        
+	        buydrug.setVisible(false);
+	        updatedeals.setVisible(false);
+	        alldeals.setVisible(false);
+	        
+	        salesbill.setVisible(false);
+	        shiftsales.setVisible(false);
+	        retdrug.setVisible(false);
+	        
+	        newcom.setVisible(false);
+	        endwith.setVisible(false);
+	        update.setVisible(false);
+	        
+	        logindetails.setVisible(false);
+	        changepass.setVisible(false);
+	        logout.setVisible(false);
+			
 		}
 
 		protected void adduserActionPerformed(java.awt.event.ActionEvent evt) {
@@ -994,20 +1298,52 @@ public class Farmacia extends javax.swing.JFrame{
 			
 		}
 
-		protected void btnShowMsgActionPerformed(java.awt.event.ActionEvent evt) {
+		private void enteruser() {
 			// TODO Auto-generated method stub
+			userB.setEnabled(false);
+	        drugs.setEnabled(true);
+	        drugdetails.setEnabled(true);
+	        sales.setEnabled(true);
+	        purchase.setEnabled(true);
+	        setting.setEnabled(true);
+	        company.setEnabled(true);
+	        
+	        adduser.setVisible(true);
+	        deleteuser.setVisible(true);
+	        updateuser.setVisible(true);
+	        
+	        adddrug.setVisible(false);
+	        deletedrug.setVisible(false);
+	        updatedrug.setVisible(false);
+	        searchdrug.setVisible(false);
+	        movedrug.setVisible(false);
+	        movedrug1.setVisible(false);
+	        
+	        editprice.setVisible(false);
+	        checkplace.setVisible(false);
+	        renew_validate.setVisible(false);
+	        expired1.setVisible(false);
+	        almost.setVisible(false);
+	        
+	        buydrug.setVisible(false);
+	        updatedeals.setVisible(false);
+	        alldeals.setVisible(false);
+	        
+	        salesbill.setVisible(false);
+	        shiftsales.setVisible(false);
+	        retdrug.setVisible(false);
+	        
+	        newcom.setVisible(false);
+	        endwith.setVisible(false);
+	        update.setVisible(false);
+	        
+	        logindetails.setVisible(false);
+	        changepass.setVisible(false);
+	        logout.setVisible(false);
 			
 		}
 
-		protected void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		protected void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
-			// TODO Auto-generated method stub
-			
-		}
+	
 
 		private void showDate() {
 			// TODO Auto-generated method stub
@@ -1128,9 +1464,16 @@ public class Farmacia extends javax.swing.JFrame{
 			
 		}
 
+
 		private void update_to_expired() {
 			// TODO Auto-generated method stub
-			
+			String sql = "update drugs set EXPIRY='Expired' where BARCODE='"+expired_bar+"' ";
+	        try{
+	            pre=con.prepareStatement(sql);
+	            pre.execute();
+	        }catch(Exception e){
+	            JOptionPane.showMessageDialog(null,e.getMessage(),"Error",2);
+	        }
 		}
 
 		private void login_as() {

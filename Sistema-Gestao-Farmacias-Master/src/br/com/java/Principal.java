@@ -1,6 +1,6 @@
 package br.com.java;
 
-import br.com.java.auth.Login;
+import br.com.java.view.Login;
 
 public class Principal {
 
