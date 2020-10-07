@@ -27,7 +27,7 @@ public class Conexao {
 		// TODO Auto-generated method stub
 		
 		   try{
-			    Class.forName("com.mysql.jdbc.Driver"); 
+			    Class.forName("com.mysql.cj.jdbc.Driver"); 
 			    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/pharmacy?useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false","root","root");
 			    if(con!=null)
 			    	
