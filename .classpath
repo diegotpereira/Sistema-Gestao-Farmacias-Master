@@ -2,5 +2,6 @@
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="src" path="Sistema-Gestao-Farmacias-Master/src"/>
+	<classpathentry kind="lib" path="C:/Users/T.I/eclipse-workspace/JAR/apache-logging-log4j.jar"/>
 	<classpathentry kind="output" path="Sistema-Gestao-Farmacias-Master/bin"/>
 </classpath>
