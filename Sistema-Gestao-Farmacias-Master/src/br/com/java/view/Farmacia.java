@@ -1357,7 +1357,9 @@ public class Farmacia extends javax.swing.JFrame{
 	                SimpleDateFormat dd = new SimpleDateFormat("hh:mm:ss a");
 	                time.setText(dd.format(d));
 	            }
-	        }).start();
+	        }
+	        
+	        		).start();
 			
 		}
 
