@@ -687,7 +687,7 @@ public class Farmacia extends javax.swing.JFrame{
 	        almost.setBounds(670, 310, 150, 31);
 
 	        retdrug.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-	        retdrug.setText("Remédio controlado");
+	        retdrug.setText("Remedio controlado");
 	        retdrug.addActionListener(new java.awt.event.ActionListener() {
 	            public void actionPerformed(java.awt.event.ActionEvent evt) {
 	                retdrugActionPerformed(evt);
