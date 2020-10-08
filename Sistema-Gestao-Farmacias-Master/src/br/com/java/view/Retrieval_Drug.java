@@ -6,7 +6,7 @@ import javax.swing.JOptionPane;
 
 public class Retrieval_Drug extends javax.swing.JFrame{
 	
-	public void Retrieval_Drug() {
+	public Retrieval_Drug() {
 		initComponents();
 	}
 
