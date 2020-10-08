@@ -17,7 +17,7 @@ public class Shift_Sales extends javax.swing.JFrame{
 	PreparedStatement pre = null;
 	ResultSet res = null;
 	
-	public void Shift_Sales() {
+	public Shift_Sales() {
 		
 		initComponents();
 		con = Conexao.getConnection();
