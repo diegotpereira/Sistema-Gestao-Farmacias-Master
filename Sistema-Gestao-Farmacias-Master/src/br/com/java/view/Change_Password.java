@@ -104,7 +104,7 @@ public class Change_Password extends javax.swing.JFrame{
 
         confirmed.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         confirmed.setForeground(new java.awt.Color(102, 204, 0));
-        confirmed.setText("Confirmed");
+        confirmed.setText("Confirmar");
 
         we_st.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         we_st.setText("Senha Fraca ");
