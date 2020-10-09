@@ -45,7 +45,7 @@ public class Sales_Bill extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Sale_Bill");
+        setTitle("Vendas");
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
@@ -53,7 +53,7 @@ public class Sales_Bill extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(102, 102, 102));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setText("Sale_Bill Form");
+        jLabel1.setText("Faturas de vendas");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -97,13 +97,13 @@ public class Sales_Bill extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jTable1);
         if (jTable1.getColumnModel().getColumnCount() > 0) {
-            jTable1.getColumnModel().getColumn(0).setHeaderValue("     Barcode");
-            jTable1.getColumnModel().getColumn(1).setHeaderValue("     Name");
-            jTable1.getColumnModel().getColumn(2).setHeaderValue("     Type");
+            jTable1.getColumnModel().getColumn(0).setHeaderValue("      Codigo barras");
+            jTable1.getColumnModel().getColumn(1).setHeaderValue("      Nome");
+            jTable1.getColumnModel().getColumn(2).setHeaderValue("      Tipo");
             jTable1.getColumnModel().getColumn(3).setHeaderValue("      Dose");
-            jTable1.getColumnModel().getColumn(4).setHeaderValue("     Quantity");
-            jTable1.getColumnModel().getColumn(5).setHeaderValue("      Price");
-            jTable1.getColumnModel().getColumn(6).setHeaderValue("      Amount");
+            jTable1.getColumnModel().getColumn(4).setHeaderValue("      Quantidade");
+            jTable1.getColumnModel().getColumn(5).setHeaderValue("      Preço");
+            jTable1.getColumnModel().getColumn(6).setHeaderValue("      Montante");
         }
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -445,17 +445,70 @@ public class Sales_Bill extends javax.swing.JFrame {
 	}
 	private void get_Total() {
 		// TODO Auto-generated method stub
-		
+		double amount=0;
+	       
+		String sql = "select AMOUNT from sales";
+	       
+		try {
+	           
+			pre=con.prepareStatement(sql);
+	           
+			res=pre.executeQuery();
+	           
+			while(res.next()){
+	           
+				amount += Double.parseDouble(res.getString("AMOUNT")); 
+	           
+				total_amount.setText(String.valueOf(amount)+"$");}
+	        
+		} catch (Exception e) {
+	       
+			JOptionPane.showMessageDialog(null,e.getMessage(),"Error",2);    
+	       
+		}
 	}
 
 	private void update_quantity() {
 		// TODO Auto-generated method stub
-		
+		String sql = "update drugs set QUANTITY='"+rest_drug+"' where BARCODE='"+barcode.getText()+"' ";
+	       
+		try {
+	        
+			pre=con.prepareStatement(sql);
+	        
+			pre.execute();
+	       
+		} catch (Exception e){
+	        
+			JOptionPane.showMessageDialog(null,e.getMessage(),"Error",2);
+	       
+		}
 	}
 
 	private boolean check_Bill() {
 		// TODO Auto-generated method stub
-		return false;
+		boolean found = false ;
+	       
+		String sql = "select BARCODE,QUANTITY from sales where BARCODE ='"+barcode.getText()+"' and QUANTITY='"+quantity.getSelectedItem()+"' ";
+	        
+		try {
+	        
+			pre=con.prepareStatement(sql);
+	        
+			res=pre.executeQuery();
+	        
+			if(res.next()){
+	            
+				found=true;
+	        
+			}
+	       
+		} catch (Exception e) {
+	     
+			JOptionPane.showMessageDialog(null,e.getMessage(),"Error",2);      
+	       
+		}
+	   return found;
 	}
 
 	
