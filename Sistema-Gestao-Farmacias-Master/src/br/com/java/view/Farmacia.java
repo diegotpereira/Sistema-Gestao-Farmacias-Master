@@ -496,7 +496,7 @@ public class Farmacia extends javax.swing.JFrame{
 	            }
 	        });
 	        jPanel1.add(changepass);
-	        changepass.setBounds(10, 195, 158, 31);
+	        changepass.setBounds(10, 195, 140, 31);
 
 	        company.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
 	        company.setForeground(new java.awt.Color(0, 51, 51));
