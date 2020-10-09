@@ -290,7 +290,7 @@ public class Shift_Sales extends javax.swing.JFrame{
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        setSize(new java.awt.Dimension(778, 606));
+        setSize(new java.awt.Dimension(778, 640));
         setLocationRelativeTo(null);
 	}
 

@@ -286,7 +286,7 @@ public class Sales_Bill extends javax.swing.JFrame {
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        setSize(new java.awt.Dimension(843, 445));
+        setSize(new java.awt.Dimension(843, 490));
         setLocationRelativeTo(null);
 	}
 	protected void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
