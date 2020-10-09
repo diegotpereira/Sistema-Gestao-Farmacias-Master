@@ -127,7 +127,7 @@ public class Login_Details extends javax.swing.JFrame {
 	        });
 
 	        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-	        jLabel2.setText("User_Name : ");
+	        jLabel2.setText("Nome de Usu\u00E1rio : ");
 
 	        month.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mês : ", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12" }));
 	        month.addItemListener(new java.awt.event.ItemListener() {
@@ -144,7 +144,7 @@ public class Login_Details extends javax.swing.JFrame {
 	        });
 
 	        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-	        jLabel3.setText("Login_Date : ");
+	        jLabel3.setText("Login Data : ");
 
 	        username.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Nome de Usuário : " }));
 	        username.addItemListener(new java.awt.event.ItemListener() {
