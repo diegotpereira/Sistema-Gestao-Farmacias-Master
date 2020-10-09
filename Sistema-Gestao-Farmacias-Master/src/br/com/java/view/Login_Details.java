@@ -42,7 +42,7 @@ public class Login_Details extends javax.swing.JFrame {
 	        username = new javax.swing.JComboBox<>();
 
 	        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-	        setTitle("Login_Details");
+	        setTitle("Contas");
 	        setResizable(false);
 
 	        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
@@ -50,7 +50,7 @@ public class Login_Details extends javax.swing.JFrame {
 	        jPanel2.setBackground(new java.awt.Color(102, 102, 102));
 
 	        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-	        jLabel1.setText("Login_Details Form");
+	        jLabel1.setText("Relação de Contas");
 
 	        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
 	        jPanel2.setLayout(jPanel2Layout);
@@ -81,7 +81,7 @@ public class Login_Details extends javax.swing.JFrame {
 	                {null, null, null, null}
 	            },
 	            new String [] {
-	                "        Name", "        Type", "        Date", "        Time"
+	                "        Nome", "        Tipo", "        Data", "        Hora"
 	            }
 	        ) {
 	            boolean[] canEdit = new boolean [] {
@@ -119,7 +119,7 @@ public class Login_Details extends javax.swing.JFrame {
 	        jPanel4.setBackground(new java.awt.Color(51, 51, 51));
 	        jPanel4.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 255, 255)));
 
-	        year.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Year : ", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026", "2027", "2028", "2029", "2030", "2031", "2032", "2033", "2034", "2035", "2036", "2037", "2038", "2039", "2040" }));
+	        year.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ano : ", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026", "2027", "2028", "2029", "2030", "2031", "2032", "2033", "2034", "2035", "2036", "2037", "2038", "2039", "2040" }));
 	        year.addItemListener(new java.awt.event.ItemListener() {
 	            public void itemStateChanged(java.awt.event.ItemEvent evt) {
 	                yearItemStateChanged(evt);
@@ -129,14 +129,14 @@ public class Login_Details extends javax.swing.JFrame {
 	        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
 	        jLabel2.setText("User_Name : ");
 
-	        month.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Month : ", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12" }));
+	        month.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mês : ", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12" }));
 	        month.addItemListener(new java.awt.event.ItemListener() {
 	            public void itemStateChanged(java.awt.event.ItemEvent evt) {
 	                monthItemStateChanged(evt);
 	            }
 	        });
 
-	        day.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Day : ", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
+	        day.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dia : ", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
 	        day.addItemListener(new java.awt.event.ItemListener() {
 	            public void itemStateChanged(java.awt.event.ItemEvent evt) {
 	                dayItemStateChanged(evt);
@@ -146,7 +146,7 @@ public class Login_Details extends javax.swing.JFrame {
 	        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
 	        jLabel3.setText("Login_Date : ");
 
-	        username.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "User_Name : " }));
+	        username.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Nome de Usuário : " }));
 	        username.addItemListener(new java.awt.event.ItemListener() {
 	            public void itemStateChanged(java.awt.event.ItemEvent evt) {
 	                usernameItemStateChanged(evt);
