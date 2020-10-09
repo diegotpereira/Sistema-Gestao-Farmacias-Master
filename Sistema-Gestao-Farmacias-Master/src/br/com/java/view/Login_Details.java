@@ -81,7 +81,7 @@ public class Login_Details extends javax.swing.JFrame {
 	                {null, null, null, null}
 	            },
 	            new String [] {
-	                "        Name", "        Type", "        Date", "        Time"
+	                "        Nome", "        Tipo", "        Data", "        Hora"
 	            }
 	        ) {
 	            boolean[] canEdit = new boolean [] {
@@ -146,7 +146,7 @@ public class Login_Details extends javax.swing.JFrame {
 	        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
 	        jLabel3.setText("Login_Date : ");
 
-	        username.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "User_Name : " }));
+	        username.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Nome de Usuário : " }));
 	        username.addItemListener(new java.awt.event.ItemListener() {
 	            public void itemStateChanged(java.awt.event.ItemEvent evt) {
 	                usernameItemStateChanged(evt);
