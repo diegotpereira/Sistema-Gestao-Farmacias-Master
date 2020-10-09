@@ -66,7 +66,7 @@ public class Company extends javax.swing.JFrame{
         jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Company");
+        setTitle("Empresas");
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
@@ -74,7 +74,7 @@ public class Company extends javax.swing.JFrame{
         jPanel2.setBackground(new java.awt.Color(102, 102, 102));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setText("Company_Form");
+        jLabel1.setText("Dados da empresa");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -94,20 +94,20 @@ public class Company extends javax.swing.JFrame{
         );
 
         jPanel3.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Company Information", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12),new java.awt.Color(255, 255, 255))); // NOI18N
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Informações da empresa", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12),new java.awt.Color(255, 255, 255))); // NOI18N
 
         address.setColumns(20);
         address.setRows(5);
         jScrollPane1.setViewportView(address);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel3.setText("Compnay_Address : ");
+        jLabel3.setText("Empresa : ");
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel4.setText("Compnay_Phone : ");
+        jLabel4.setText("Telefone : ");
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel2.setText("Compnay_Name : ");
+        jLabel2.setText("Nome  : ");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -148,7 +148,7 @@ public class Company extends javax.swing.JFrame{
         jPanel4.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 255, 255)));
 
         jButton4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jButton4.setText("Clear");
+        jButton4.setText("Limpar");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -156,7 +156,7 @@ public class Company extends javax.swing.JFrame{
         });
 
         save.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        save.setText("Save_Info");
+        save.setText("Salvar");
         save.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 saveActionPerformed(evt);
@@ -164,7 +164,7 @@ public class Company extends javax.swing.JFrame{
         });
 
         delete.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        delete.setText("Delete_Info");
+        delete.setText("Deletar");
         delete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 deleteActionPerformed(evt);
@@ -172,7 +172,7 @@ public class Company extends javax.swing.JFrame{
         });
 
         update.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        update.setText("Update_Info");
+        update.setText("Alterar");
         update.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 updateActionPerformed(evt);
@@ -251,7 +251,7 @@ public class Company extends javax.swing.JFrame{
         jPanel6.setBackground(new java.awt.Color(51, 51, 51));
         jPanel6.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 255, 255)));
 
-        jLabel5.setText("Note : You must save Your Companys Information that You Want to Deal With");
+        jLabel5.setText("Observa\u00E7\u00E3o: voc\u00EA deve salvar as informa\u00E7\u00F5es da sua empresa com as quais deseja modificar");
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
