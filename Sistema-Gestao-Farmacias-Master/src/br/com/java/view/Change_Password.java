@@ -1,10 +1,13 @@
 package br.com.java.view;
 
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+
+import javax.swing.JOptionPane;
 
 import br.com.java.connection.Conexao;
 
@@ -47,7 +50,7 @@ public class Change_Password extends javax.swing.JFrame{
         jSeparator1 = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Change_Password");
+        setTitle("Senha");
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
@@ -55,7 +58,7 @@ public class Change_Password extends javax.swing.JFrame{
         jPanel2.setBackground(new java.awt.Color(102, 102, 102));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel5.setText("Change_Password_Form");
+        jLabel5.setText("Alteração de Senha");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -75,7 +78,7 @@ public class Change_Password extends javax.swing.JFrame{
         );
 
         jPanel3.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Change Your Password", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12), new java.awt.Color(255, 255, 255))); // NOI18N
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Modifique Sua Senha", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12), new java.awt.Color(255, 255, 255))); // NOI18N
 
         confirm.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -89,22 +92,22 @@ public class Change_Password extends javax.swing.JFrame{
             }
         });
 
-        jLabel3.setText("New_Password : ");
+        jLabel3.setText("Nova Senha : ");
 
-        jLabel1.setText("User_Id : ");
+        jLabel1.setText("identificação Usuário : ");
 
-        jLabel4.setText("Confirm_New_Password : ");
+        jLabel4.setText("Confirme a Senha : ");
 
         id.setEditable(false);
 
-        jLabel2.setText("Old_Password : ");
+        jLabel2.setText("Senha Antiga : ");
 
         confirmed.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         confirmed.setForeground(new java.awt.Color(102, 204, 0));
         confirmed.setText("Confirmed");
 
         we_st.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        we_st.setText("very weak ");
+        we_st.setText("Senha Fraca ");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -158,7 +161,7 @@ public class Change_Password extends javax.swing.JFrame{
         jPanel4.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 255, 255)));
 
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jButton2.setText("Cancel");
+        jButton2.setText("Cancelar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -166,7 +169,7 @@ public class Change_Password extends javax.swing.JFrame{
         });
 
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jButton1.setText("Update_Password");
+        jButton1.setText("Alterar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -236,25 +239,133 @@ public class Change_Password extends javax.swing.JFrame{
 	}
     protected void jButton1ActionPerformed(ActionEvent evt) {
 		// TODO Auto-generated method stub
-		
+		if (old_pass.getText().equals("") || new_pass.getText().equals("") ||confirm.getText().equals("")) {
+			JOptionPane.showMessageDialog(null, "Complete sua informação", "Falta dados", 2);
+		}else {
+			if (check_pass()) {
+				String sql = "update users set PASSWORD = '"+new_pass.getText()+"' where ID='"+id.getText()+"' ";
+				
+				try {
+					pre = con.prepareStatement(sql);
+					pre.execute();
+					JOptionPane.showInternalMessageDialog(null, "Senha atualizada com sucesso", "Sucesso na operação", 1);
+					clear();
+				} catch (Exception e) {
+					// TODO: handle exception
+					JOptionPane.showMessageDialog(null, e.getLocalizedMessage(), "Error", 2);
+				}
+			}else {
+				JOptionPane.showMessageDialog(null, "Por favor check sua antiga senha", "Erro na senha", 2);
+			}
+			
+		}
 	}
 
 
-	protected void jButton2ActionPerformed(ActionEvent evt) {
+	private void clear() {
 		// TODO Auto-generated method stub
-		
+		old_pass.setText("");
+        new_pass.setText("");
+        confirm.setText("");
+        confirmed.setVisible(false);
+        we_st.setVisible(false);
 	}
 
 
-	protected void new_passKeyReleased(KeyEvent evt) {
+	private boolean check_pass() {
 		// TODO Auto-generated method stub
-		
+		boolean check = false;
+        String sql = "select PASSWORD from users where ID='"+id.getText()+"' ";
+        
+        try {
+         
+        	pre=con.prepareStatement(sql);
+         
+        	res=pre.executeQuery();
+         
+        	if(res.next()){
+             
+        		if(res.getString("PASSWORD").equals(old_pass.getText())){
+                 
+        			if(!(new_pass.getText().length() < 6)){
+                
+        				check=true;
+                 
+        			} 
+             
+        		}
+         
+        	}
+        
+        } catch (Exception e) {
+            
+        	JOptionPane.showMessageDialog(null,e.getMessage(),"Error",2);
+        
+        }
+        
+        return check;
 	}
 
 
-	protected void confirmKeyReleased(KeyEvent evt) {
+	protected void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
 		// TODO Auto-generated method stub
+		this.dispose();
+	}
+
+
+	protected void new_passKeyReleased(java.awt.event.KeyEvent evt) {
+		// TODO Auto-generated method stub
+		if(new_pass.getText().length()==0){
+	         we_st.setVisible(false);   
+	        
+		}
+	        
 		
+		else if(new_pass.getText().length()<6){
+	    
+			we_st.setVisible(true);
+	    
+			we_st.setText("Very Weak");
+	    
+			we_st.setForeground(Color.RED);
+	
+		}else {
+	    
+			we_st.setVisible(true);
+	    
+			we_st.setText("Very Good");
+	    
+			we_st.setForeground(Color.GREEN);
+	
+		}
+	}
+
+
+	protected void confirmKeyReleased(java.awt.event.KeyEvent evt) {
+		// TODO Auto-generated method stub
+		if(confirm.getText().equals("")){
+	         
+			confirmed.setVisible(false);   
+	        
+		}
+	        
+		else if(confirm.getText().equals(new_pass.getText())){
+	          
+			confirmed.setVisible(true);
+	          
+			confirmed.setText("Confirmed");
+	          
+			confirmed.setForeground(Color.GREEN);
+	
+		}else {
+	    
+			confirmed.setVisible(true);
+	    
+			confirmed.setText("Wrong Password");
+	    
+			confirmed.setForeground(Color.RED);
+	
+		}
 	}
 	// Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPasswordField confirm;
