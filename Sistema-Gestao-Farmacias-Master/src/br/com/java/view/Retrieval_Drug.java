@@ -27,14 +27,15 @@ public class Retrieval_Drug extends javax.swing.JFrame{
         price = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Retrieval Drugs");
+        setTitle("Recuperação");
 
         jPanel2.setBackground(new java.awt.Color(51, 51, 51));
 
         jPanel1.setBackground(new java.awt.Color(102, 102, 102));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setText("Retrieval Drugs");
+        jLabel1.setText("Formulário de recuperação de medicamentos");
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -57,13 +58,17 @@ public class Retrieval_Drug extends javax.swing.JFrame{
         jPanel3.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 255, 255)));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel4.setText("Drug_Name : ");
+        jLabel4.setText("Nome : ");
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
 
+        
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel2.setText("Barcode : ");
+        jLabel2.setText("Código de barras : ");
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel3.setText("OR");
+        jLabel3.setText("Ou");
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -96,7 +101,7 @@ public class Retrieval_Drug extends javax.swing.JFrame{
         );
 
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButton1.setText("Get Price");
+        jButton1.setText("Obter preço");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -104,13 +109,15 @@ public class Retrieval_Drug extends javax.swing.JFrame{
         });
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        jLabel5.setText("Or press Enter");
+        jLabel5.setText("Ou pressione Enter");
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
 
         jPanel4.setBackground(new java.awt.Color(51, 51, 51));
         jPanel4.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 255, 255)));
 
         price.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         price.setText("          0.00");
+        price.setForeground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -176,7 +183,7 @@ public class Retrieval_Drug extends javax.swing.JFrame{
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        setSize(new java.awt.Dimension(543, 347));
+        setSize(new java.awt.Dimension(750, 347));
         setLocationRelativeTo(null);
 	}
 	 

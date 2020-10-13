@@ -48,7 +48,7 @@ public class Shift_Sales extends javax.swing.JFrame{
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Shift Sales");
+        setTitle("Vendas por turno");
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
@@ -56,7 +56,7 @@ public class Shift_Sales extends javax.swing.JFrame{
         jPanel2.setBackground(new java.awt.Color(102, 102, 102));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setText("Shift_Sales Form");
+        jLabel1.setText("Formulário de Vendas de Turno");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);

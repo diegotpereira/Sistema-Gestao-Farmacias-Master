@@ -602,7 +602,7 @@ public class Farmacia extends javax.swing.JFrame{
 	        logout.setBounds(10, 236, 141, 31);
 
 	        shiftsales.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-	        shiftsales.setText("Shift Sales");
+	        shiftsales.setText("Vendas por turno");
 	        shiftsales.addActionListener(new java.awt.event.ActionListener() {
 	            public void actionPerformed(java.awt.event.ActionEvent evt) {
 	                shiftsalesActionPerformed(evt);
