@@ -55,7 +55,7 @@ public class Buy_Drug extends javax.swing.JFrame{
         update1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Buy_Drug");
+        setTitle("Comprar medicação");
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
@@ -63,7 +63,8 @@ public class Buy_Drug extends javax.swing.JFrame{
         jPanel2.setBackground(new java.awt.Color(102, 102, 102));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setText("Buy_Drug Form");
+        jLabel1.setText("Comprar Medicamentos");
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -86,22 +87,26 @@ public class Buy_Drug extends javax.swing.JFrame{
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Buy Drugs", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12), new java.awt.Color(255, 255, 255))); // NOI18N
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel3.setText("Drug_Name : ");
+        jLabel3.setText("Nome do fornecedor: ");
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel2.setText("Drug_Barcode : ");
+        jLabel2.setText("Codigo de barras : ");
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
 
         type.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Drug_Type : ", "Bills", "Injection", "Drink", "Fizzing" }));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel5.setText("Company_Name : ");
+        jLabel5.setText("Fornecedor nome : ");
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
 
         company_name.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Company_Name : " }));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel6.setText("Quantity : ");
+        jLabel6.setText("Quantidade : ");
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
 
-        barcode.setToolTipText("Enter Barcode and Press Enter for Updating");
+        barcode.setToolTipText("Digite o código de barras e pressione Enter para atualizar");
         barcode.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 barcodeKeyPressed(evt);
@@ -109,15 +114,18 @@ public class Buy_Drug extends javax.swing.JFrame{
         });
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel4.setText("Drug_Type : ");
+        jLabel4.setText("Tipo de medicação : ");
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel7.setText("Cost_Price : ");
+        jLabel7.setText("Preço de custo : ");
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
 
         quantity.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Quantity : ", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40" }));
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel9.setText("Amount : ");
+        jLabel9.setText("Montante : ");
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
