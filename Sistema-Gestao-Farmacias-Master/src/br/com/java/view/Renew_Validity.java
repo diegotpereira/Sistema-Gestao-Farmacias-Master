@@ -61,8 +61,8 @@ public class Renew_Validity extends javax.swing.JFrame{
 
         jPanel2.setBackground(new java.awt.Color(102, 102, 102));
 
-        jLabel1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 30)); // NOI18N
-        jLabel1.setText("Formulário renovar validade");
+        jLabel1.setFont(new Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setText("Renovar validade");
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -83,7 +83,7 @@ public class Renew_Validity extends javax.swing.JFrame{
         );
 
         jPanel3.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Renew Your Drugs", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12),new java.awt.Color(255, 255, 255))); // NOI18N
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Renove seus medicamentos", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12),new java.awt.Color(255, 255, 255))); // NOI18N
 
         barcode.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
