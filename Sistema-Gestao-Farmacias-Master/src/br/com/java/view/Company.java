@@ -313,28 +313,129 @@ public class Company extends javax.swing.JFrame{
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        setSize(new java.awt.Dimension(900, 421));
+        setSize(new java.awt.Dimension(950, 421));
         setLocationRelativeTo(null);
 	}
 
 	protected void updateActionPerformed(ActionEvent evt) {
 		// TODO Auto-generated method stub
-		
+		if(name.getText().equals("")||address.getText().equals("")||phone.getText().equals("")){
+			  
+			JOptionPane.showMessageDialog(null,"Complete Company Information","Missing Information",2);
+			
+		}else {
+			  
+			String sql = "update company set ADDRESS='"+address.getText()+"' ,PHONE='"+phone.getText()+"' where NAME='"+name.getText()+"' ";  
+			  
+			try{
+			    
+				pre=con.prepareStatement(sql);
+			    
+				pre.execute();
+			    
+				JOptionPane.showMessageDialog(null,"Company_Information has been Saved Successfully","Success Operation",1);
+			  
+				companylist();
+			  
+				clear();
+				
+			}catch(Exception e){
+			      
+				JOptionPane.showMessageDialog(null,e.getMessage(),"Error",2);
+				
+			}
+			  
+			
+		}
 	}
 
 	protected void deleteActionPerformed(ActionEvent evt) {
 		// TODO Auto-generated method stub
-		
+		if(name.getText().equals("")){
+			  
+			JOptionPane.showMessageDialog(null,"Enter Company_Name You Want to Delete","Missing Information",2);
+			
+		}else {
+			  
+			String sql = "delete from company where NAME='"+name.getText()+"' ";  
+			  
+			int suring = JOptionPane.showConfirmDialog(null,"Are You Sure from Deleteing This Information");
+			  
+			try{
+			      
+				if(suring==0){
+			    
+					pre=con.prepareStatement(sql);
+			    
+					pre.execute();
+			    
+					JOptionPane.showMessageDialog(null,"Company_Information has been Deleted Successfully","Success Operation",1);
+			    
+					companylist();
+			    
+					clear();
+			      
+				}
+				
+			}catch(Exception e){
+			      
+				JOptionPane.showMessageDialog(null,e.getMessage(),"Error",2);
+			  
+			}  
+			   
+		}
 	}
 
 	protected void saveActionPerformed(ActionEvent evt) {
 		// TODO Auto-generated method stub
-		
+		if(name.getText().equals("")||address.getText().equals("")||phone.getText().equals("")){
+			  
+			JOptionPane.showMessageDialog(null,"Complete Company Information","Missing Information",2);
+			
+		}else {
+			  
+			String sql = "insert into company (NAME,ADDRESS,PHONE) values ('"+name.getText()+"' ,'"+address.getText()+"' ,'"+phone.getText()+"' )";  
+			  
+			try{
+			    
+				int suring = JOptionPane.showConfirmDialog(null,"Are You Sure from this Information\n"
+			            + "Name : "+name.getText()+"\n"+"Address : "+address.getText()+"\n"+"Phone : "+phone.getText()
+			            +"\n\n Note : Company_Name Will not be updated");
+			    
+				
+				if(suring==0){
+			    
+					pre=con.prepareStatement(sql);
+			    
+					pre.execute();
+			    
+					JOptionPane.showMessageDialog(null,"Company_Information has been Saved Successfully","Success Operation",1);
+			  
+					companylist();
+			  
+					clear();
+			  
+				}
+			  
+			}catch(Exception e){
+			      
+				JOptionPane.showMessageDialog(null,e.getMessage(),"Error",2);
+			  
+			}
+	
+		}
 	}
 
 	protected void jButton4ActionPerformed(ActionEvent evt) {
 		// TODO Auto-generated method stub
-		
+		clear();
+	}
+
+	private void clear() {
+		// TODO Auto-generated method stub
+		name.setText("");
+		address.setText("");
+		phone.setText("");
 	}
 
 	// Variables declaration - do not modify//GEN-BEGIN:variables
