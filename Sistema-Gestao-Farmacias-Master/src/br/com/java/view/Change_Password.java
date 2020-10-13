@@ -93,14 +93,18 @@ public class Change_Password extends javax.swing.JFrame{
         });
 
         jLabel3.setText("Nova Senha : ");
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel1.setText("identificação Usuário : ");
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel4.setText("Confirme a Senha : ");
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
 
         id.setEditable(false);
 
         jLabel2.setText("Senha Antiga : ");
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
 
         confirmed.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         confirmed.setForeground(new java.awt.Color(102, 204, 0));
@@ -108,6 +112,7 @@ public class Change_Password extends javax.swing.JFrame{
 
         we_st.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         we_st.setText("Senha Fraca ");
+        we_st.setForeground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
