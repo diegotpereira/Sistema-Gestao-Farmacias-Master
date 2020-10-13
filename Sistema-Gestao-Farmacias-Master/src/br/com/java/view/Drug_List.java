@@ -42,7 +42,7 @@ public class Drug_List extends javax.swing.JFrame{
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Drug_List Form");
+        setTitle("Lista de medicamentos");
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
@@ -50,7 +50,7 @@ public class Drug_List extends javax.swing.JFrame{
         jPanel2.setBackground(new java.awt.Color(102, 102, 102));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setText("Drug_List");
+        jLabel1.setText("Tabela de medicamentos");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -128,7 +128,8 @@ public class Drug_List extends javax.swing.JFrame{
         });
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel2.setText("Sort By : ");
+        jLabel2.setText("Order por : ");
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -283,50 +284,50 @@ public class Drug_List extends javax.swing.JFrame{
 		    res=pre.executeQuery();
 		    
 		    if(res.next()){
-		        String Name = res.getString("NAME");
+		        String Name = res.getString("NOME");
 		        Farmacia.drug.name.setText(Name);
 		        
-		        String Type = res.getString("TYPE");
+		        String Type = res.getString("TIPO");
 		        Farmacia.drug.type.setSelectedItem(Type);
 		        
-		        String Barcode = res.getString("BARCODE");
+		        String Barcode = res.getString("CÓD BARRAS");
 		        Farmacia.drug.barcode.setText(Barcode);
 		        
-		        String Code = res.getString("CODE");
+		        String Code = res.getString("CÓDIGO");
 		        Farmacia.drug.code.setText(Code);
 		        
 		        String Dose = res.getString("DOSE");
 		        Farmacia.drug.dose.setText(Dose);
 		        
-		        String cost_price = res.getString("COST_PRICE");
+		        String cost_price = res.getString("CUSTO");
 		        Farmacia.drug.cost_price.setText(cost_price);
 		        
-		        String sell_price = res.getString("SELLING_PRICE");
+		        String sell_price = res.getString("VENDA");
 		        Farmacia.drug.selling_price.setText(sell_price);
 		        
-		        String company_Name = res.getString("COMPANY_NAME");
+		        String company_Name = res.getString("COMPANIA");
 		        Farmacia.drug.company_name.setSelectedItem(company_Name);
 		        
-		        String Quantity = res.getString("QUANTITY");
+		        String Quantity = res.getString("QUANTIDADE");
 		        Farmacia.drug.quantity.setSelectedItem(Quantity);
 		        
-		        String Day = res.getString("PRODUCTION_DATE").split("-")[0];
+		        String Day = res.getString("DTFABRICACAO").split("-")[0];
 		        Farmacia.drug.pro_day.setSelectedItem(Day);
-	            String Month = res.getString("PRODUCTION_DATE").split("-")[1];
+	            String Month = res.getString("DTFABRICACAO").split("-")[1];
 	            Farmacia.drug.pro_month.setSelectedItem(Month);
-	            String Year = res.getString("PRODUCTION_DATE").split("-")[2];
+	            String Year = res.getString("DTFABRICACAO").split("-")[2];
 	            Farmacia.drug.pro_year.setSelectedItem(Year);
 	             
-	            String ex_Day = res.getString("EXPIRATION_DATE").split("-")[0];
+	            String ex_Day = res.getString("VALIDADE").split("-")[0];
 	            Farmacia.drug.exp_day.setSelectedItem(ex_Day);
-	            String ex_Month = res.getString("EXPIRATION_DATE").split("-")[1];
+	            String ex_Month = res.getString("VALIDADE").split("-")[1];
 	            Farmacia.drug.exp_month.setSelectedItem(ex_Month);
-	            String ex_Year = res.getString("EXPIRATION_DATE").split("-")[2];
+	            String ex_Year = res.getString("VALIDADE").split("-")[2];
 	            Farmacia.drug.exp_year.setSelectedItem(ex_Year);
 	        
-	            String sec = res.getString("PLACE").split("-")[0];
+	            String sec = res.getString("LOCAL").split("-")[0];
 	            Farmacia.drug.section.setSelectedItem(sec);
-	            String pla = res.getString("PLACE").split("-")[1];
+	            String pla = res.getString("LOCAL").split("-")[1];
 	            Farmacia.drug.place.setSelectedItem(pla);
 		        
              
