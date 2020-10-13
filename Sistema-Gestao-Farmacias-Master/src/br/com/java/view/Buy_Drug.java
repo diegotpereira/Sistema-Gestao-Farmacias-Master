@@ -84,7 +84,7 @@ public class Buy_Drug extends javax.swing.JFrame{
         );
 
         jPanel3.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Buy Drugs", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12), new java.awt.Color(255, 255, 255))); // NOI18N
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Comprar medicação", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12), new java.awt.Color(255, 255, 255))); // NOI18N
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel3.setText("Nome do fornecedor: ");
@@ -196,7 +196,7 @@ public class Buy_Drug extends javax.swing.JFrame{
         jPanel4.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 255, 255)));
 
         makedeal.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        makedeal.setText("Make a Deal");
+        makedeal.setText("Fazer um acordo");
         makedeal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 makedealActionPerformed(evt);
@@ -204,7 +204,7 @@ public class Buy_Drug extends javax.swing.JFrame{
         });
 
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButton2.setText("Cancel");
+        jButton2.setText("Cancelar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -212,7 +212,7 @@ public class Buy_Drug extends javax.swing.JFrame{
         });
 
         update.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        update.setText("Update");
+        update.setText("Alterar");
         update.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 updateActionPerformed(evt);
@@ -220,7 +220,7 @@ public class Buy_Drug extends javax.swing.JFrame{
         });
 
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButton3.setText("Clear");
+        jButton3.setText("Limpar");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -228,7 +228,7 @@ public class Buy_Drug extends javax.swing.JFrame{
         });
 
         update1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        update1.setText("Delete");
+        update1.setText("Excluir");
         update1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 update1ActionPerformed(evt);
@@ -302,7 +302,7 @@ public class Buy_Drug extends javax.swing.JFrame{
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        setSize(new java.awt.Dimension(730, 450));
+        setSize(new java.awt.Dimension(850, 450));
         setLocationRelativeTo(null);
 	}
 
