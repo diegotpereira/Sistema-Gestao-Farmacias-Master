@@ -54,7 +54,7 @@ public class Renew_Validity extends javax.swing.JFrame{
         jSeparator1 = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Renew Validity");
+        setTitle("Renovar Validade");
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
@@ -62,7 +62,8 @@ public class Renew_Validity extends javax.swing.JFrame{
         jPanel2.setBackground(new java.awt.Color(102, 102, 102));
 
         jLabel1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 30)); // NOI18N
-        jLabel1.setText("Renew Validity Form");
+        jLabel1.setText("Formulário renovar validade");
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -91,10 +92,12 @@ public class Renew_Validity extends javax.swing.JFrame{
         });
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel4.setText("Expiration_Date : ");
+        jLabel4.setText("Data de validade : ");
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel2.setText("Barcode : ");
+        jLabel2.setText("Código de barras : ");
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
 
         jTable1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -123,10 +126,12 @@ public class Renew_Validity extends javax.swing.JFrame{
         }
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel3.setText("Production_Date : ");
+        jLabel3.setText("Data de fabircação : ");
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel5.setText("Quantity : ");
+        jLabel5.setText("Quantidade : ");
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
 
         pro_day.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Day : ", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
 
@@ -144,7 +149,7 @@ public class Renew_Validity extends javax.swing.JFrame{
         jPanel4.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 255, 255)));
 
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButton1.setText("Renew Drug");
+        jButton1.setText("Renovar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -152,7 +157,7 @@ public class Renew_Validity extends javax.swing.JFrame{
         });
 
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButton2.setText("Cancel");
+        jButton2.setText("Cancelar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -299,7 +304,7 @@ public class Renew_Validity extends javax.swing.JFrame{
 				pro_month.getSelectedIndex()==0||pro_year.getSelectedIndex()==0||
 				exp_day.getSelectedIndex()==0||exp_month.getSelectedIndex()==0||
 				exp_year.getSelectedIndex()==0||exp_time.getText().equals("")){
-				JOptionPane.showMessageDialog(null,"Complete Drug Information","Missing Information",2);
+				JOptionPane.showMessageDialog(null,"Complete a informação do medicamento","Faltando informação",2);
 				
 		}else {
 				   
