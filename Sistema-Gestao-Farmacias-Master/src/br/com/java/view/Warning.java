@@ -33,7 +33,7 @@ public class Warning extends javax.swing.JFrame{
 	        jButton2 = new javax.swing.JButton();
 
 	        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-	        setTitle("Warning");
+	        setTitle("Aviso");
 	        setLocation(new java.awt.Point(0, 0));
 	        setMaximizedBounds(new java.awt.Rectangle(0, 0, 0, 0));
 	        setResizable(false);
@@ -43,7 +43,8 @@ public class Warning extends javax.swing.JFrame{
 	        jPanel2.setBackground(new java.awt.Color(102, 102, 102));
 
 	        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-	        jLabel1.setText("Warning_Form");
+	        jLabel1.setText("Formulário de avisos");
+	        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
 
 	        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
 	        jPanel2.setLayout(jPanel2Layout);
@@ -65,7 +66,7 @@ public class Warning extends javax.swing.JFrame{
 	        jPanel3.setBackground(new java.awt.Color(51, 51, 51));
 	        jPanel3.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 255, 255)));
 
-	        jButton1.setText("Show_List");
+	        jButton1.setText("Mostrar lista");
 	        jButton1.addActionListener(new java.awt.event.ActionListener() {
 	            public void actionPerformed(java.awt.event.ActionEvent evt) {
 	                jButton1ActionPerformed(evt);
@@ -74,15 +75,18 @@ public class Warning extends javax.swing.JFrame{
 
 	        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
 	        jLabel2.setForeground(new java.awt.Color(255, 0, 0));
-	        jLabel2.setText("Warning : ");
+	        jLabel2.setText("Aviso : ");
+	        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
 
 	        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-	        jLabel3.setText("You have some medicines which are");
+	        jLabel3.setText("Você tem alguns medicamentos que estão");
+	        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
 
 	        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-	        jLabel4.setText(" close to expire .");
+	        jLabel4.setText(" perto de vencer .");
+	        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
 
-	        jButton2.setText("Cancel");
+	        jButton2.setText("Cancelar");
 	        jButton2.addActionListener(new java.awt.event.ActionListener() {
 	            public void actionPerformed(java.awt.event.ActionEvent evt) {
 	                jButton2ActionPerformed(evt);
