@@ -398,41 +398,28 @@ public class Shift_Sales extends javax.swing.JFrame{
 	protected void usernameItemStateChanged(java.awt.event.ItemEvent evt) {
 		// TODO Auto-generated method stub
 		String sql;
-		
-		if (day.getSelectedIndex() == 0 && month.getSelectedIndex() ==0  && year.getSelectedIndex() ==0) {
-			
-			sql = "\"select USER_NAME,BARCODE,NAME,QUANTITY,PRICE,AMOUNT,DATE from history_sales where USER_NAME='\"+username.getSelectedItem()+\"'";
-			
-			double amount = 0;
-			
-			try {
-				
-				pre = con.prepareStatement(sql);
-				res = pre.executeQuery();
-				jTable1.setModel(DbUtils.resultSetToTableModel(res));
-				help_user1();
-			} catch (Exception e) {
-				// TODO: handle exception
-				JOptionPane.showMessageDialog(null, e.getMessage(), "error", 2);
-			}
-			
-		
-		}else {
-
-			sql = "\"select USER_NAME,BARCODE,NAME,QUANTITY,PRICE,AMOUNT,DATE from history_sales where USER_NAME='\"+username.getSelectedItem()+\"' and DATE='\"+day.getSelectedItem()+\"-\"+month.getSelectedItem()+\"-\"+year.getSelectedItem()+\"'";
-			double amouth = 0;
-			
-			try {
-				
-				pre = con.prepareStatement(sql);
-				res = pre.executeQuery();
-				jTable1.setModel(DbUtils.resultSetToTableModel(res));
-				help_user();
-			} catch (Exception e) {
-				// TODO: handle exception
-				JOptionPane.showMessageDialog(null,e.getMessage(),"Error",2);
-			}
-		}
+        if(day.getSelectedIndex()==0&&month.getSelectedIndex()==0&&year.getSelectedIndex()==0){
+sql = "select USER_NAME,BARCODE,NAME,QUANTITY,PRICE,AMOUNT,DATE from history_sales where USER_NAME='"+username.getSelectedItem()+"' ";
+       double amount = 0; 
+       try {
+       pre=con.prepareStatement(sql);
+       res=pre.executeQuery();
+       jTable1.setModel(DbUtils.resultSetToTableModel(res));
+       help_user1();	
+       } catch (Exception e) {
+        JOptionPane.showMessageDialog(null,e.getMessage(),"Error",2);
+        }}else {
+sql = "select USER_NAME,BARCODE,NAME,QUANTITY,PRICE,AMOUNT,DATE from history_sales where USER_NAME='"+username.getSelectedItem()+"' and DATE='"+day.getSelectedItem()+"-"+month.getSelectedItem()+"-"+year.getSelectedItem()+"' ";
+       double amount = 0; 
+       try {
+       pre=con.prepareStatement(sql);
+       res=pre.executeQuery();
+       jTable1.setModel(DbUtils.resultSetToTableModel(res));
+       help_user();
+       }catch (Exception e) {
+        JOptionPane.showMessageDialog(null,e.getMessage(),"Error",2);
+       }
+}
 			
 		
 	}
