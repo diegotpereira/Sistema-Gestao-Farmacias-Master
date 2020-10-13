@@ -65,7 +65,7 @@ public class User extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("User Form");
+        setTitle("Usuários");
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
@@ -74,7 +74,7 @@ public class User extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(102, 102, 102));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setText("User Form");
+        jLabel1.setText("Formulário de usuários");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -96,11 +96,12 @@ public class User extends javax.swing.JFrame {
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         jPanel3.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "User Details", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12), new java.awt.Color(255, 255, 255))); // NOI18N
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Informação de usuários", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12), new java.awt.Color(255, 255, 255))); // NOI18N
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel3.setText("DOB : ");
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 113, -1, -1));
 
         day.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Day : ", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
@@ -108,7 +109,8 @@ public class User extends javax.swing.JFrame {
         jPanel3.add(phone, new org.netbeans.lib.awtextra.AbsoluteConstraints(151, 243, 188, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel5.setText("Phone : ");
+        jLabel5.setText("Telefone : ");
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 246, -1, -1));
 
         address.setColumns(20);
@@ -118,7 +120,8 @@ public class User extends javax.swing.JFrame {
         jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(151, 148, 188, 72));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel2.setText("User_Name : ");
+        jLabel2.setText("Nome de Usuário : ");
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 72, -1, -1));
         jPanel3.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(151, 69, 188, -1));
         jPanel3.add(salary, new org.netbeans.lib.awtextra.AbsoluteConstraints(151, 291, 188, -1));
@@ -127,23 +130,27 @@ public class User extends javax.swing.JFrame {
         jPanel3.add(month, new org.netbeans.lib.awtextra.AbsoluteConstraints(211, 110, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel4.setText("Address : ");
+        jLabel4.setText("Endereço : ");
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 160, -1, -1));
 
         year.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Year : ", "1970", "1971", "1972", "1973", "1974", "1975", "1976", "1977", "1978", "1979", "1980", "1981", "1982", "1983", "1984", "1985", "1986", "1987", "1988", "1989", "1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", " " }));
         jPanel3.add(year, new org.netbeans.lib.awtextra.AbsoluteConstraints(282, 110, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel6.setText("Salary : ");
+        jLabel6.setText("Salário : ");
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jPanel3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 294, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel7.setText("Password : ");
+        jLabel7.setText("Senha : ");
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jPanel3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 341, -1, -1));
         jPanel3.add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(151, 338, 188, -1));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel8.setText("User_Id : ");
+        jLabel8.setText("Id de usuário : ");
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jPanel3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 31, -1, -1));
         jPanel3.add(id, new org.netbeans.lib.awtextra.AbsoluteConstraints(151, 28, 188, -1));
 
@@ -155,7 +162,7 @@ public class User extends javax.swing.JFrame {
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         deleteuser.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        deleteuser.setText("Delete User");
+        deleteuser.setText("Deletar");
         deleteuser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 deleteuserActionPerformed(evt);
@@ -164,7 +171,7 @@ public class User extends javax.swing.JFrame {
         jPanel4.add(deleteuser, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 13, -1, -1));
 
         adduser.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        adduser.setText("Add User");
+        adduser.setText("Adicionar");
         adduser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 adduserActionPerformed(evt);
@@ -173,7 +180,7 @@ public class User extends javax.swing.JFrame {
         jPanel4.add(adduser, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 13, 89, -1));
 
         jButton4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jButton4.setText("Clear");
+        jButton4.setText("Limpar");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -182,7 +189,7 @@ public class User extends javax.swing.JFrame {
         jPanel4.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 90, -1));
 
         updateuser.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        updateuser.setText("Update User");
+        updateuser.setText("Alterar");
         updateuser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 updateuserActionPerformed(evt);
@@ -191,7 +198,7 @@ public class User extends javax.swing.JFrame {
         jPanel4.add(updateuser, new org.netbeans.lib.awtextra.AbsoluteConstraints(107, 13, -1, -1));
 
         jButton6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jButton6.setText("Cancel");
+        jButton6.setText("Cancelar");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
@@ -202,7 +209,7 @@ public class User extends javax.swing.JFrame {
         jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 510, 406, 80));
 
         jPanel5.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Users Table", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12), new java.awt.Color(255, 255, 255))); // NOI18N
+        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Lista de usuários", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12), new java.awt.Color(255, 255, 255))); // NOI18N
 
         users.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         users.setModel(new javax.swing.table.DefaultTableModel(
@@ -262,7 +269,7 @@ public class User extends javax.swing.JFrame {
         jPanel6.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 255, 255)));
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel9.setText("(1-) User_Password Should be at least 6 Charcters");
+        jLabel9.setText("(1-) \r\n" +  "A senha do usuário deve ter pelo menos 6 caracteres");
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel10.setText("(2-) User_ID is Non-Adjustable , thanks");
@@ -327,7 +334,7 @@ public class User extends javax.swing.JFrame {
 		    	String Id = res.getString("ID");
 		        id.setText(Id);
 		        
-		         String Name = res.getString("NAME");
+		         String Name = res.getString("NOME");
 		         name.setText(Name);
 		        
 		             String Day = res.getString("DOB").split("-")[0];
@@ -337,16 +344,16 @@ public class User extends javax.swing.JFrame {
 		             String Year = res.getString("DOB").split("-")[2];
 		             year.setSelectedItem(Year);
 		        
-		         String Address = res.getString("ADDRESS");
+		         String Address = res.getString("ENDERECO");
 		         address.setText(Address);
 		        
-		         String Phone = res.getString("PHONE");
+		         String Phone = res.getString("TELEFONE");
 		         phone.setText(Phone);
 		        
-		         String Salary = res.getString("SALARY");
+		         String Salary = res.getString("SALARIO");
 		         salary.setText(Salary);
 		         
-		         String Password = res.getString("PASSWORD");
+		         String Password = res.getString("SENHA");
 		         password.setText(Password);
 		         password.setEchoChar('*');
 		    
@@ -371,7 +378,7 @@ public class User extends javax.swing.JFrame {
 				month.getSelectedIndex()==0||year.getSelectedIndex()==0||address.getText().equals("")||
 				    phone.getText().equals("")||salary.getText().equals("")){
 				  
-			JOptionPane.showMessageDialog(null,"Complete Your Information","Missing Information",2); 
+			JOptionPane.showMessageDialog(null,"\r\n" + "Preencha suas informações","Faltando informação",2); 
 				
 		}else {
 				 
@@ -383,7 +390,7 @@ public class User extends javax.swing.JFrame {
 				 
 				pre.execute();
 				 
-				JOptionPane.showMessageDialog(null,"User has been added Successfully","Success",1);
+				JOptionPane.showMessageDialog(null,"\r\n" +  "O usuário foi adicionado com sucesso","Success",1);
 				
 			}catch(Exception e){
 				    
@@ -412,7 +419,7 @@ public class User extends javax.swing.JFrame {
 				    phone.getText().equals("")||password.getText().equals("")||
 				        salary.getText().equals("")){
 				  
-			JOptionPane.showMessageDialog(null,"Complete Your Information","Missing Information",2); 
+			JOptionPane.showMessageDialog(null,"Preencha suas informações","\r\n" +  "Faltando informação",2); 
 				
 		}
 				
