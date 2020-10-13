@@ -66,7 +66,7 @@ public class Drug extends javax.swing.JFrame{
         jSeparator1 = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Drug Form");
+        setTitle("Medicamentos");
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
@@ -74,7 +74,8 @@ public class Drug extends javax.swing.JFrame{
         jPanel2.setBackground(new java.awt.Color(102, 102, 102));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setText("Drug Form");
+        jLabel1.setText("Formulário de medicamentos");
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -94,37 +95,47 @@ public class Drug extends javax.swing.JFrame{
         );
 
         jPanel3.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Drug Information", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12), new java.awt.Color(255, 255, 255))); // NOI18N
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Informação de medicamentos", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12), new java.awt.Color(255, 255, 255))); // NOI18N
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel3.setText("Drug_Type : ");
+        jLabel3.setText("Tipo de medicamento : ");
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel2.setText("Drug_Name : ");
+        jLabel2.setText("Nome medicamento : ");
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel11.setText("Expiration_Date : ");
+        jLabel11.setText("Data de validade : ");
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel6.setText("Drug_Cost_Price : ");
+        jLabel6.setText("Preço de custo : ");
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel7.setText("Drug_Selling_Price : ");
+        jLabel7.setText("Preço de venda : ");
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel4.setText("Drug_Dose : ");
+        jLabel4.setText("Dosagem : ");
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel10.setText("Production_Date : ");
+        jLabel10.setText("Data de fabricação : ");
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel14.setText("Drug_Place : ");
+        jLabel14.setText("Drogaria : ");
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel9.setText("Company_Name : ");
+        jLabel9.setText("Fabricante : ");
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel5.setText("Drug_Code : ");
+        jLabel5.setText("Código da medicação : ");
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
 
         company_name.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Company_Name : " }));
 
@@ -147,12 +158,14 @@ public class Drug extends javax.swing.JFrame{
         type.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Drug_Type : ", "Pills", "Injection", "Syrup", "Drink" }));
 
         jLabel15.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel15.setText("Drug_Quantity : ");
+        jLabel15.setText("Quantidade : ");
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
 
         quantity.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Quantity : ", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40" }));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel8.setText("Drug_Barcode  : ");
+        jLabel8.setText("Código de barras  : ");
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -290,7 +303,7 @@ public class Drug extends javax.swing.JFrame{
         jPanel4.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 255, 255)));
 
         updatedrug.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        updatedrug.setText("Update_Drug");
+        updatedrug.setText("Alterar");
         updatedrug.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 updatedrugActionPerformed(evt);
@@ -298,7 +311,7 @@ public class Drug extends javax.swing.JFrame{
         });
 
         druglist.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        druglist.setText("Drugs_List");
+        druglist.setText("Listar");
         druglist.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 druglistActionPerformed(evt);
@@ -306,7 +319,7 @@ public class Drug extends javax.swing.JFrame{
         });
 
         jButton5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jButton5.setText("Cancel");
+        jButton5.setText("Cancelar");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
@@ -314,7 +327,7 @@ public class Drug extends javax.swing.JFrame{
         });
 
         deletedrug.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        deletedrug.setText("Delete_Drug");
+        deletedrug.setText("Deletar");
         deletedrug.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 deletedrugActionPerformed(evt);
@@ -322,7 +335,7 @@ public class Drug extends javax.swing.JFrame{
         });
 
         adddrug.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        adddrug.setText("Add_Drug");
+        adddrug.setText("Adicionar");
         adddrug.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 adddrugActionPerformed(evt);
@@ -330,7 +343,7 @@ public class Drug extends javax.swing.JFrame{
         });
 
         jButton6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jButton6.setText("Clear");
+        jButton6.setText("Limpar");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
