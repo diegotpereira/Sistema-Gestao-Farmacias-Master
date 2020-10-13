@@ -11,6 +11,7 @@ import javax.swing.JOptionPane;
 
 import br.com.java.connection.Conexao;
 import net.proteanit.sql.DbUtils;
+import javax.swing.GroupLayout.Alignment;
 
 public class Edit_Price extends javax.swing.JFrame{
 	
@@ -46,7 +47,7 @@ public class Edit_Price extends javax.swing.JFrame{
         jSeparator1 = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Edit_Price");
+        setTitle("Alterar preços");
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
@@ -54,24 +55,24 @@ public class Edit_Price extends javax.swing.JFrame{
         jPanel2.setBackground(new java.awt.Color(102, 102, 102));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setText("Edit_Prices Form");
+        jLabel1.setText("Formul\u00E1rio de Edi\u00E7\u00E3o de Pre\u00E7os");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(146, 146, 146)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        	jPanel2Layout.createParallelGroup(Alignment.LEADING)
+        		.addGroup(jPanel2Layout.createSequentialGroup()
+        			.addGap(47)
+        			.addComponent(jLabel1)
+        			.addContainerGap(109, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(30, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(28, 28, 28))
+        	jPanel2Layout.createParallelGroup(Alignment.TRAILING)
+        		.addGroup(jPanel2Layout.createSequentialGroup()
+        			.addContainerGap(30, Short.MAX_VALUE)
+        			.addComponent(jLabel1)
+        			.addGap(28))
         );
+        jPanel2.setLayout(jPanel2Layout);
 
         jPanel3.setBackground(new java.awt.Color(51, 51, 51));
         jPanel3.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 255, 255)));
@@ -103,7 +104,8 @@ public class Edit_Price extends javax.swing.JFrame{
         });
         jScrollPane1.setViewportView(jTable1);
 
-        jLabel6.setText("Barcode : ");
+        jLabel6.setText("C\u00F3digo de barras : ");
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
 
         barcode.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -142,20 +144,24 @@ public class Edit_Price extends javax.swing.JFrame{
 
         old_price.setEditable(false);
 
-        jLabel2.setText("Old_Price : ");
+        jLabel2.setText("Pre\u00E7o antigo :");
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
 
-        jLabel3.setText("New_Price : ");
+        jLabel3.setText("Novo pre\u00E7o :");
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
 
-        jButton1.setText("Update");
+        jButton1.setText("Alterar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jLabel4.setText("$");
+        jLabel4.setText("R$");
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
 
-        jLabel5.setText("$");
+        jLabel5.setText("R$");
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
