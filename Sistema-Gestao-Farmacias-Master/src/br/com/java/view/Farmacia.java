@@ -479,7 +479,7 @@ public class Farmacia extends javax.swing.JFrame{
 	        setting.setBounds(10, 102, 141, 34);
 
 	        logindetails.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-	        logindetails.setText("Detalhes de Login");
+	        logindetails.setText("Login");
 	        logindetails.addActionListener(new java.awt.event.ActionListener() {
 	            public void actionPerformed(java.awt.event.ActionEvent evt) {
 	                logindetailsActionPerformed(evt);
@@ -489,7 +489,7 @@ public class Farmacia extends javax.swing.JFrame{
 	        logindetails.setBounds(10, 154, 141, 31);
 
 	        changepass.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-	        changepass.setText("Alterar Password");
+	        changepass.setText("Alterar Senha");
 	        changepass.addActionListener(new java.awt.event.ActionListener() {
 	            public void actionPerformed(java.awt.event.ActionEvent evt) {
 	                changepassActionPerformed(evt);
@@ -510,7 +510,7 @@ public class Farmacia extends javax.swing.JFrame{
 	        company.setBounds(188, 102, 118, 34);
 
 	        editprice.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-	        editprice.setText("Edit Prices");
+	        editprice.setText("Editar pre\u00E7os");
 	        editprice.addActionListener(new java.awt.event.ActionListener() {
 	            public void actionPerformed(java.awt.event.ActionEvent evt) {
 	                editpriceActionPerformed(evt);
@@ -612,7 +612,7 @@ public class Farmacia extends javax.swing.JFrame{
 	        shiftsales.setBounds(338, 195, 150, 31);
 
 	        checkplace.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-	        checkplace.setText("Check Places");
+	        checkplace.setText("Verificar local");
 	        checkplace.addActionListener(new java.awt.event.ActionListener() {
 	            public void actionPerformed(java.awt.event.ActionEvent evt) {
 	                checkplaceActionPerformed(evt);
