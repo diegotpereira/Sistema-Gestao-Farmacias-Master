@@ -79,7 +79,8 @@ public class Shift_Sales extends javax.swing.JFrame{
         jPanel3.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 255, 255)));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel2.setText("User_Name : ");
+        jLabel2.setText("Nome de usuário : ");
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
 
         username.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "User_Name : " }));
         username.addItemListener(new java.awt.event.ItemListener() {
@@ -89,7 +90,8 @@ public class Shift_Sales extends javax.swing.JFrame{
         });
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel3.setText("Date : ");
+        jLabel3.setText("Data : ");
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
 
         day.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Day : ", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
         day.addItemListener(new java.awt.event.ItemListener() {
@@ -193,10 +195,12 @@ public class Shift_Sales extends javax.swing.JFrame{
         jPanel5.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 255, 255)));
 
         total.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        total.setText("00.0$");
+        total.setText("R$ 00.0");
+        total.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel4.setText("Daily gain : ");
+        jLabel4.setText("Ganho diário : ");
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -224,7 +228,7 @@ public class Shift_Sales extends javax.swing.JFrame{
         jPanel6.setBackground(new java.awt.Color(51, 51, 51));
         jPanel6.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 255, 255)));
 
-        jButton1.setText("Reset Name and Date");
+        jButton1.setText("Reiniciar Nome e Data");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
