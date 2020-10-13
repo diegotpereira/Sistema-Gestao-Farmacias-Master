@@ -45,7 +45,7 @@ public class Move_Drug extends javax.swing.JFrame{
         place = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Move_Drug Form");
+        setTitle("Formulário de movimentação de medicação");
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
@@ -53,7 +53,8 @@ public class Move_Drug extends javax.swing.JFrame{
         jPanel2.setBackground(new java.awt.Color(102, 102, 102));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setText("Move_Drug");
+        jLabel1.setText("Movimenta\u00E7\u00E3o de medica\u00E7\u00E3o");
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -82,7 +83,8 @@ public class Move_Drug extends javax.swing.JFrame{
         });
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel2.setText("Drug_Barcode : ");
+        jLabel2.setText("Código de barras : ");
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
 
         drug_place.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         drug_place.setModel(new javax.swing.table.DefaultTableModel(
@@ -145,12 +147,14 @@ public class Move_Drug extends javax.swing.JFrame{
         jPanel4.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 255, 255)));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel5.setText("New_Place : ");
+        jLabel5.setText("Novo lugar : ");
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel4.setText("Old_Place : ");
+        jLabel4.setText("Velho lugar : ");
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
 
-        jButton1.setText("Update");
+        jButton1.setText("Alterar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
