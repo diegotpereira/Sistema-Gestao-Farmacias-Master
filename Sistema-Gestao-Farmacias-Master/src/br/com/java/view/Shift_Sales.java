@@ -195,7 +195,7 @@ public class Shift_Sales extends javax.swing.JFrame{
         jPanel5.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 255, 255)));
 
         total.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        total.setText("00.0$");
+        total.setText("R$ 00.0");
         total.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -372,7 +372,7 @@ public class Shift_Sales extends javax.swing.JFrame{
 		           
 				amount += Double.parseDouble(res.getString("AMOUNT")) ;
 		       
-			} total.setText(String.valueOf(amount)+"$");
+			} total.setText(String.valueOf(amount)+"R$"); //help
 		       
 		} catch (Exception e) {
 		        
@@ -402,30 +402,56 @@ public class Shift_Sales extends javax.swing.JFrame{
 	protected void usernameItemStateChanged(java.awt.event.ItemEvent evt) {
 		// TODO Auto-generated method stub
 		String sql;
-        if(day.getSelectedIndex()==0&&month.getSelectedIndex()==0&&year.getSelectedIndex()==0){
-sql = "select USER_NAME,BARCODE,NAME,QUANTITY,PRICE,AMOUNT,DATE from history_sales where USER_NAME='"+username.getSelectedItem()+"' ";
-       double amount = 0; 
-       try {
-       pre=con.prepareStatement(sql);
-       res=pre.executeQuery();
-       jTable1.setModel(DbUtils.resultSetToTableModel(res));
-       help_user1();	
-       } catch (Exception e) {
-        JOptionPane.showMessageDialog(null,e.getMessage(),"Error",2);
-        }}else {
-sql = "select USER_NAME,BARCODE,NAME,QUANTITY,PRICE,AMOUNT,DATE from history_sales where USER_NAME='"+username.getSelectedItem()+"' and DATE='"+day.getSelectedItem()+"-"+month.getSelectedItem()+"-"+year.getSelectedItem()+"' ";
-       double amount = 0; 
-       try {
-       pre=con.prepareStatement(sql);
-       res=pre.executeQuery();
-       jTable1.setModel(DbUtils.resultSetToTableModel(res));
-       help_user();
-       }catch (Exception e) {
-        JOptionPane.showMessageDialog(null,e.getMessage(),"Error",2);
-       }
-}
+        
+		if(day.getSelectedIndex()==0&&month.getSelectedIndex()==0&&year.getSelectedIndex()==0){
+
+			
+			sql = "select USER_NAME,BARCODE,NAME,QUANTITY,PRICE,AMOUNT,DATE from history_sales where USER_NAME='"+username.getSelectedItem()+"' ";
+       
+			double amount = 0; 
+       
+			try {
+       
+				pre=con.prepareStatement(sql);
+       
+				res=pre.executeQuery();
+       
+				jTable1.setModel(DbUtils.resultSetToTableModel(res));
+       
+				help_user1();	
+       
+			} catch (Exception e) {
+        
+				JOptionPane.showMessageDialog(null,e.getMessage(),"Error",2);
+        
+			}
+			
+		}else {
+
+			sql = "select USER_NAME,BARCODE,NAME,QUANTITY,PRICE,AMOUNT,DATE from history_sales where USER_NAME='"+username.getSelectedItem()+"' and DATE='"+day.getSelectedItem()+"-"+month.getSelectedItem()+"-"+year.getSelectedItem()+"' ";
+       
+			double amount = 0; 
+       
+			try {
+       
+				pre=con.prepareStatement(sql);
+       
+				res=pre.executeQuery();
+       
+				jTable1.setModel(DbUtils.resultSetToTableModel(res));
+       
+				help_user();
+       
+			}catch (Exception e) {
+        
+				JOptionPane.showMessageDialog(null,e.getMessage(),"Error",2);
+       
+			}
+
+		}
 			
 		
+	
 	}
 
 	private void help_user() {
@@ -444,8 +470,9 @@ sql = "select USER_NAME,BARCODE,NAME,QUANTITY,PRICE,AMOUNT,DATE from history_sal
 	           
 				amount += Double.parseDouble(res.getString("AMOUNT")) ;
 	       
-			} total.setText(String.valueOf(amount)+"$");
+			} total.setText(String.valueOf(amount)+"R$"); // help_user
 	       
+		
 		} catch (Exception e) {
 	        
 			
@@ -468,7 +495,7 @@ sql = "select USER_NAME,BARCODE,NAME,QUANTITY,PRICE,AMOUNT,DATE from history_sal
 		    	
 			}
 		 
-		    total.setText(String.valueOf(amount)+"$");
+		    total.setText(String.valueOf(amount)+"Reais"); // help_user1
 		    
 		} catch (Exception e) {
 			// TODO: handle exception
@@ -498,36 +525,48 @@ sql = "select USER_NAME,BARCODE,NAME,QUANTITY,PRICE,AMOUNT,DATE from history_sal
 	// Variables declaration - do not modify//GEN-BEGIN:variables
 	
 	public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
         try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
+            
+        	for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                
+        		if ("Nimbus".equals(info.getName())) {
+                    
+        			javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    
+        			break;
+                
+        		}
+            
+        	}
+        
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Shift_Sales.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            
+        	java.util.logging.Logger.getLogger(Shift_Sales.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Shift_Sales.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            
+        	java.util.logging.Logger.getLogger(Shift_Sales.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        
         } catch (IllegalAccessException ex) {
             java.util.logging.Logger.getLogger(Shift_Sales.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Shift_Sales.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        
         }
-        //</editor-fold>
 
-        /* Create and display the form */
+
+        
         java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
+            
+        	public void run() {
                 new Shift_Sales().setVisible(true);
-            }
+            
+        	}
+        
         });
-    }
+    
+	}
     
 	public javax.swing.JComboBox<String> day;
     private javax.swing.JButton jButton1;
