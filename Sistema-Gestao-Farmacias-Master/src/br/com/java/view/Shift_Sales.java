@@ -373,7 +373,13 @@ public class Shift_Sales extends javax.swing.JFrame{
 				amount += Double.parseDouble(res.getString("AMOUNT")) ;
 		       
 <<<<<<< HEAD
+<<<<<<< HEAD
 			} total.setText(String.valueOf(amount)+"R$"); //help
+=======
+			} 
+			
+			total.setText(String.valueOf(amount)+"$");
+>>>>>>> refs/remotes/origin/master
 =======
 			} 
 			
@@ -412,6 +418,7 @@ public class Shift_Sales extends javax.swing.JFrame{
 		if(day.getSelectedIndex()==0&&month.getSelectedIndex()==0&&year.getSelectedIndex()==0){
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 			
 			sql = "select USER_NAME,BARCODE,NAME,QUANTITY,PRICE,AMOUNT,DATE from history_sales where USER_NAME='"+username.getSelectedItem()+"' ";
        
@@ -436,6 +443,31 @@ public class Shift_Sales extends javax.swing.JFrame{
 		}else {
 
 
+			sql = "select USER_NAME,BARCODE,NAME,QUANTITY,PRICE,AMOUNT,DATE from history_sales where USER_NAME='"+username.getSelectedItem()+"' ";
+       
+			double amount = 0; 
+       
+			try {
+       
+				pre=con.prepareStatement(sql);
+       
+				res=pre.executeQuery();
+       
+				jTable1.setModel(DbUtils.resultSetToTableModel(res));
+       
+				help_user1();	
+       
+			} catch (Exception e) {
+        
+				JOptionPane.showMessageDialog(null,e.getMessage(),"Error",2);
+        
+			}
+			
+		}else {
+
+			
+>>>>>>> refs/remotes/origin/master
+=======
 			sql = "select USER_NAME,BARCODE,NAME,QUANTITY,PRICE,AMOUNT,DATE from history_sales where USER_NAME='"+username.getSelectedItem()+"' ";
        
 			double amount = 0; 
