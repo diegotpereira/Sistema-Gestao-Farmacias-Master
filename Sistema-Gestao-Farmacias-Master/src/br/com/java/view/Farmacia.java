@@ -131,12 +131,15 @@ public class Farmacia extends javax.swing.JFrame{
 
 	        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
 	        jLabel1.setText("Gerência da Farmácia");
+	        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
 
 	        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 	        jLabel2.setText("Hora");
+	        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
 
 	        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 	        jLabel3.setText("Data");
+	        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
 
 	        time.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
 	        time.setForeground(new java.awt.Color(0, 0, 102));
@@ -622,7 +625,7 @@ public class Farmacia extends javax.swing.JFrame{
 	        checkplace.setBounds(670, 150, 150, 31);
 
 	        druglist.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-	        druglist.setText("Drugs_List");
+	        druglist.setText("Lista de medicamentos");
 	        druglist.addActionListener(new java.awt.event.ActionListener() {
 	            public void actionPerformed(java.awt.event.ActionEvent evt) {
 	                druglistActionPerformed(evt);
@@ -705,6 +708,9 @@ public class Farmacia extends javax.swing.JFrame{
 
 	        jMenu2.setText("Sobre Desenvolvedor");
 	        jMenuBar1.add(jMenu2);
+	        
+	       
+	        
 
 	        setJMenuBar(jMenuBar1);
 
