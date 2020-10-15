@@ -195,7 +195,7 @@ public class Shift_Sales extends javax.swing.JFrame{
         jPanel5.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 255, 255)));
 
         total.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        total.setText("R$ 00.0");
+        total.setText("00.0$");
         total.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -456,7 +456,7 @@ sql = "select USER_NAME,BARCODE,NAME,QUANTITY,PRICE,AMOUNT,DATE from history_sal
 
 	private void help_user1() {
 		// TODO Auto-generated method stub
-		String sql = "select USER_NAME,BARCODE,NAME,QUANTITY,PRICE,AMOUNT,DATE from history_sales where USER_NAME='\"+username.getSelectedItem()+\"'";
+		String sql = "select USER_NAME,BARCODE,NAME,QUANTITY,PRICE,AMOUNT,DATE from history_sales where USER_NAME='"+username.getSelectedItem()+"'";
 		double amount = 0;
 		
 		try {
