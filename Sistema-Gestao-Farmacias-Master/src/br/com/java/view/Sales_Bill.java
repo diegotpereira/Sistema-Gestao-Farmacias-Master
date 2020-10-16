@@ -58,6 +58,7 @@ public class Sales_Bill extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setText("Faturas de vendas");
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         
         JLayeredPane layeredPane = new JLayeredPane();
 
