@@ -38,7 +38,7 @@ public class Search_Drug extends javax.swing.JFrame{
         jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Search_Drug Form");
+        setTitle("Buscar Medicamentos");
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
@@ -46,7 +46,8 @@ public class Search_Drug extends javax.swing.JFrame{
         jPanel2.setBackground(new java.awt.Color(102, 102, 102));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setText("Search_Drug");
+        jLabel1.setText("Formulário de busca de medicamentos");
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -69,7 +70,8 @@ public class Search_Drug extends javax.swing.JFrame{
         jPanel3.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 255, 255)));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel2.setText("Drug_Barcode : ");
+        jLabel2.setText("Código de barras : ");
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
 
         drugbarcode.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -100,7 +102,8 @@ public class Search_Drug extends javax.swing.JFrame{
         jScrollPane1.setViewportView(searching);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel3.setText("Name : ");
+        jLabel3.setText("Nome : ");
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
 
         name.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -109,10 +112,12 @@ public class Search_Drug extends javax.swing.JFrame{
         });
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 9)); // NOI18N
-        jLabel4.setText("Search by Drug_Name");
+        jLabel4.setText("Buscar por nome");
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 9)); // NOI18N
-        jLabel5.setText("Search by Drug_Barcode");
+        jLabel5.setText("Buscar por código");
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
